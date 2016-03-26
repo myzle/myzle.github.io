@@ -1,0 +1,829 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.4" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Swift," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Myzle's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+
+
+
+
+<meta name="description" content="Getting Started12345import Cocoavar str = &quot;Hello, playground&quot;str += &quot;!&quot;
+用let定义常量用var定义变量swift支持类型推断，定义的时候可以不写具体的类型，但是要付给初始值。
+print()用来输出数据到console， print()是函数（function）
+Types, Constants, and Variable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift学习笔记">
+<meta property="og:url" content="http://myzle.github.io/2016/01/29/Swift/index.html">
+<meta property="og:site_name" content="Myzle's Blog">
+<meta property="og:description" content="Getting Started12345import Cocoavar str = &quot;Hello, playground&quot;str += &quot;!&quot;
+用let定义常量用var定义变量swift支持类型推断，定义的时候可以不写具体的类型，但是要付给初始值。
+print()用来输出数据到console， print()是函数（function）
+Types, Constants, and Variable">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/64bd2d1bjw1f0gb4p245ej20c20h8mxu.jpg">
+<meta property="og:updated_time" content="2016-02-04T04:02:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Swift学习笔记">
+<meta name="twitter:description" content="Getting Started12345import Cocoavar str = &quot;Hello, playground&quot;str += &quot;!&quot;
+用let定义常量用var定义变量swift支持类型推断，定义的时候可以不写具体的类型，但是要付给初始值。
+print()用来输出数据到console， print()是函数（function）
+Types, Constants, and Variable">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/64bd2d1bjw1f0gb4p245ej20c20h8mxu.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: "post",
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> Swift学习笔记 | Myzle's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?41f2ac3e7c22ef73312321800c11b369";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+
+  <div class="container one-collumn  page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Myzle's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Swift学习笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-01-29T13:23:47+08:00" content="2016-01-29">
+              2016-01-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/29/Swift/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/29/Swift/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://ww3.sinaimg.cn/large/64bd2d1bjw1f0gb4p245ej20c20h8mxu.jpg" alt=""></p>
+<h3 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"Hello, playground"</span></span><br><span class="line"></span><br><span class="line">str += <span class="string">"!"</span></span><br></pre></td></tr></table></figure>
+<p>用let定义常量<br>用var定义变量<br>swift支持类型推断，定义的时候可以不写具体的类型，但是要付给初始值。</p>
+<p>print()用来输出数据到console， print()是函数（function）</p>
+<h3 id="Types-Constants-and-Variables"><a href="#Types-Constants-and-Variables" class="headerlink" title="Types, Constants, and Variables"></a>Types, Constants, and Variables</h3><p>需要改改变的值定义成变量，不需要改变的值定义成常量。<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numberOfStoplights: <span class="type">Int</span> = <span class="number">4</span></span><br><span class="line"><span class="keyword">var</span> population: <span class="type">Int</span></span><br><span class="line">population = <span class="number">5422</span></span><br></pre></td></tr></table></figure></p>
+<p>“ \ ()” 用来在一个string中插入常量或者变量的值</p>
+<h3 id="Conditionals"><a href="#Conditionals" class="headerlink" title="Conditionals"></a>Conditionals</h3><p> x = a ? b : c<br> 如果a是true，x ＝ b，否则x ＝ c<br> if可以嵌套</p>
+<h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><p> OS X中，Int是64 bit长的，使用Int时要注意不要越界</p>
+<p> 声明Int型的实例（instance）<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> numberOfPages： <span class="type">Int</span> ＝ <span class="number">10</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h3> <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> statusCode: <span class="type">Int</span> = <span class="number">404</span></span><br><span class="line"><span class="keyword">var</span> errorString: string</span><br><span class="line"><span class="keyword">switch</span> statusCode &#123;</span><br><span class="line"><span class="keyword">case</span> <span class="number">400</span>:</span><br><span class="line">    errorString = <span class="string">"Bad request"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="number">401</span>:</span><br><span class="line">    errorString = <span class="string">"Unauthorized"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="number">403</span>:</span><br><span class="line">    errorString = <span class="string">"Forbidden"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="number">404</span>:</span><br><span class="line">    errorString = <span class="string">"Not found"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">    errorString = <span class="string">"None"</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>swift中的switch不需要break，如果某一个case条件match，就执行对应的代码，然后开始执行switch之后的代码</p>
+<h4 id="ranges"><a href="#ranges" class="headerlink" title="ranges"></a>ranges</h4><p>valueX…valueY</p>
+<h4 id="where"><a href="#where" class="headerlink" title="where"></a>where</h4><p>where提供了在switch中附加判断条件的能力</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> <span class="keyword">let</span> unknownCode <span class="keyword">where</span> (unknownCode &gt;= <span class="number">200</span> &amp;&amp; unknownCode &lt; <span class="number">300</span>) || unknownCode &gt; <span class="number">505</span>:</span><br><span class="line">    errorString = <span class="string">"<span class="subst">\(unknownCode)</span> is not a known error code."</span></span><br></pre></td></tr></table></figure>
+<p>tuple</p>
+<p>一组逻辑相关的值构成一个元组<br>（statusCode, errorString)<br>如果元组中使用了下划线，表示这个值可以是任意值<br>（404， _ )</p>
+<h3 id="Loops"><a href="#Loops" class="headerlink" title="Loops"></a>Loops</h3><h4 id="for-in"><a href="#for-in" class="headerlink" title="for-in"></a>for-in</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myFirstInt: <span class="type">Int</span> = <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>...<span class="number">5</span> &#123;</span><br><span class="line">  ++myFirstInt</span><br><span class="line">  <span class="built_in">print</span>(myFirstInt)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="for-case"><a href="#for-case" class="headerlink" title="for case"></a>for case</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="keyword">case</span> <span class="keyword">let</span> i <span class="keyword">in</span> <span class="number">1</span>...<span class="number">100</span> <span class="keyword">where</span> i % <span class="number">3</span> == <span class="number">0</span> &#123;</span><br><span class="line">  <span class="built_in">print</span>(i)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>把1…100中所有能被3整除的数字打印出来</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>...<span class="number">100</span> &#123;</span><br><span class="line">  <span class="keyword">if</span> i % <span class="number">3</span> == <span class="number">0</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这两段代码是等价的，但是第一种可读性更好，代码也更简洁</p>
+<h4 id="for-Loops"><a href="#for-Loops" class="headerlink" title="for Loops"></a>for Loops</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="keyword">var</span> i = <span class="number">1</span>; i &lt; <span class="number">6</span>; ++i &#123;</span><br><span class="line">  ++myFirstInt</span><br><span class="line">  <span class="built_in">print</span>(myFirstInt)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="while-Loops"><a href="#while-Loops" class="headerlink" title="while Loops"></a>while Loops</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> i = <span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> i &lt; <span class="number">6</span> &#123;</span><br><span class="line">  ++myFirstInt</span><br><span class="line">  <span class="built_in">print</span>(myFirstInt)</span><br><span class="line">  ++i</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>break 跳出循环，执行循环后面的代码<br>continue 结束本次循环，继续下次循环</p>
+<h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h3><p>Unicode swift的String和Character类型是建立在Unicode码之上的</p>
+<h3 id="Optionals"><a href="#Optionals" class="headerlink" title="Optionals"></a>Optionals</h3><p>Optional是swift引入的全新概念，简单来说就是表示某个instance可能为空，如果一个常量或者变量被定义成了optional类型，就表示它可能有值，也可能为空。</p>
+<p>swift为了安全而引入了optional，如果一个instance可能有值，也可能是nil，那么它必须被定义为optional类型，反过来说，如果一个instance没有被定义成optional，那么它一定不为空。</p>
+<p>强制解包optioanl unwrapping</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> errorCodeString: <span class="type">String</span>?</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> errorCodeString != <span class="literal">nil</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> theError = errorCodeString!</span><br><span class="line">  <span class="built_in">print</span>(theError)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="optional-Binding"><a href="#optional-Binding" class="headerlink" title="optional Binding"></a>optional Binding</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> errorCodeString: <span class="type">String</span>?</span><br><span class="line">errorCodeString = <span class="string">"404"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> theError = errorCodeString &#123;</span><br><span class="line">  <span class="built_in">print</span>(theError)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h3><p>Arrays are an ordered collection of values. Each position in an array is identified by an index, and any value can appear multiple times in an array.</p>
+<h4 id="Accessing-and-Modifying-Arrays"><a href="#Accessing-and-Modifying-Arrays" class="headerlink" title="Accessing and Modifying Arrays"></a>Accessing and Modifying Arrays</h4><p>向数组添加值</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> bucketList = [<span class="string">"Climb Mt. Everest"</span>]</span><br><span class="line">bucketList.append(<span class="string">"Fly hot air balloon to Fiji"</span>)</span><br></pre></td></tr></table></figure>
+<p>从数组删掉值</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line">bucketList.removeAtIndex(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>计算数组中元素个数<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bucketList.<span class="built_in">count</span></span><br></pre></td></tr></table></figure></p>
+<p>取数组中的一部分数值</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bucketList[<span class="number">0</span>...<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+<p>在数组中插入值</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bucketList.insert(<span class="string">"Toboggan across Alaska"</span>, atIndex: <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="Dictionaries"><a href="#Dictionaries" class="headerlink" title="Dictionaries"></a>Dictionaries</h3><p>字典，内部数据无顺序，都是key－value对<br>swift的字典要求所有的key不是是hashable的。<br>swift中String， Int， Float， Double， Bool都是hashable的。</p>
+<h4 id="Creating-a-Dictionary"><a href="#Creating-a-Dictionary" class="headerlink" title="Creating a Dictionary"></a>Creating a Dictionary</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> movieRatings = [<span class="string">"Donnie Darko"</span>: <span class="number">4</span>, <span class="string">"Chungking Express"</span>: <span class="number">5</span>, <span class="string">"Dark City"</span>: <span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+<h4 id="Accessing-and-Modifying-a-Dictionary"><a href="#Accessing-and-Modifying-a-Dictionary" class="headerlink" title="Accessing and Modifying a Dictionary"></a>Accessing and Modifying a Dictionary</h4><p>字典中key－value对的个数：movieRatings.count<br>从字典中获取值：movieRatings[“Donnie Darko”]<br>无论何时，你提供给字典一个key，它返回的都是一个optional类型的值， 可能是和这个key匹配的value，也可能是nil<br>update 字典中的数据：movieRatings.updateValue(5, forKey: “Donnie Darko”)</p>
+<h4 id="Adding-and-Removing-Values"><a href="#Adding-and-Removing-Values" class="headerlink" title="Adding and Removing Values"></a>Adding and Removing Values</h4><p>向字典中添加一个key－value对： movieRatings[“The Cabinet for Dr. Caligari” = 5]<br>从字典中删除一个key－value对： movieRatings.removeValueForKey(“Dark City”)</p>
+<h4 id="Looping"><a href="#Looping" class="headerlink" title="Looping"></a>Looping</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (key, value) <span class="keyword">in</span> movieRatings &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"The movie <span class="subst">\(key)</span> was rated <span class="subst">\(value)</span>."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>单独循环<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> movie <span class="keyword">in</span> movieRatings.keys &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"User has rated <span class="subst">\(movie)</span>."</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Translating-a-Dictionary-to-an-Array"><a href="#Translating-a-Dictionary-to-an-Array" class="headerlink" title="Translating a Dictionary to an Array"></a>Translating a Dictionary to an Array</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> watchedMovies = <span class="type">Array</span>(movieRatings.keys)</span><br></pre></td></tr></table></figure>
+<h3 id="Sets"><a href="#Sets" class="headerlink" title="Sets"></a>Sets</h3><h4 id="What-Is-a-Set"><a href="#What-Is-a-Set" class="headerlink" title="What Is a Set"></a>What Is a Set</h4><p>A Set is an unordered collection of distinct instances.<br>set中的值必须是唯一的。</p>
+<h4 id="Getting-a-Set"><a href="#Getting-a-Set" class="headerlink" title="Getting a Set"></a>Getting a Set</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> groceryBag = <span class="type">Set</span>&lt;<span class="type">String</span>&gt;()</span><br></pre></td></tr></table></figure>
+<p>向Set中添加元素<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groceryBag.insert(<span class="string">"Apples"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>在set中循环</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> food <span class="keyword">in</span> groceryBag &#123;</span><br><span class="line">  <span class="built_in">print</span>(food)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>从数组构建set</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> groceryBag: <span class="type">Set</span> = [<span class="string">"Apples"</span>, <span class="string">"Oranges"</span>, <span class="string">"Pineapple"</span>]</span><br></pre></td></tr></table></figure>
+<p>set中是否存在：groceryBag.contains(“Bananas”)<br>set取并集：let commonGroceryBag = groceryBag.union(friendsGroceryBag)<br>set取交集：let itemsToReturn = commonGroceryBag.intersect(roommatesGroceryBag)<br>两个set是否有交集：let disjoint = yourSecondBag.isDisjointWith(roommatesSecondBag)</p>
+<p>###Functions</p>
+<p>A function is a named set of code that is used to accomplish some specific task.</p>
+<p>定义一个function</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printGreeting</span><span class="params">()</span></span> &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"Hello, playground."</span>)</span><br><span class="line">&#125;</span><br><span class="line">printGreeting()</span><br></pre></td></tr></table></figure>
+<h4 id="function-的参数"><a href="#function-的参数" class="headerlink" title="function 的参数"></a>function 的参数</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printPersonalGreeting</span><span class="params">(name: String)</span></span> &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"Hello <span class="subst">\(name)</span>, welcome to your playground."</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">printPersonalGreeting(<span class="string">"Matt"</span>)</span><br></pre></td></tr></table></figure>
+<p>printPersonalGreeting调用时，不需要使用第一个参数的名字。</p>
+<p>By default, if you call a function with more than one parameter, the first parameter name is not used, but all others are.</p>
+<h4 id="外部参数名："><a href="#外部参数名：" class="headerlink" title="外部参数名："></a>外部参数名：</h4><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">divisionDescription</span><span class="params">(forNumerator num: Double, andDenominator den: Double)</span></span> &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"<span class="subst">\(num)</span> divided by <span class="subst">\(den)</span> equals <span class="subst">\(num / den)</span>"</span>)</span><br><span class="line">&#125;</span><br><span class="line">divisionDescription(forNumerator: <span class="number">9.0</span>, andDenominator: <span class="number">3.0</span>)</span><br></pre></td></tr></table></figure>
+<p>外部参数用于函数调用，内部参数用于实现函数的功能。</p>
+<h4 id="Variadic-parameters"><a href="#Variadic-parameters" class="headerlink" title="Variadic parameters"></a>Variadic parameters</h4><p>可变参数，参数的个数不是固定的，一个function只能含有一个variadic parameters 而且必须是最后一个参数</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">printPersonalGreeting</span><span class="params">(names: String...)</span></span> &#123;</span><br><span class="line">  <span class="keyword">for</span> name <span class="keyword">in</span> names &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Hello <span class="subst">\(name)</span>, welcome to the playground"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">printPersonalGreeting(<span class="string">"Alex"</span>, <span class="string">"Chris"</span>, <span class="string">"Drew"</span>, <span class="string">"Pat"</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="Default-parameter-values"><a href="#Default-parameter-values" class="headerlink" title="Default parameter values"></a>Default parameter values</h4><p>Swift 的参数可以有默认值，默认值应该放在函数参数列表的最后，如果一个参数有默认值，那么在调用行数的时候可以不提供这个参数的值。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">divisionDescription</span><span class="params">(forNumerator num: Double, andDenominator den: Double, withPunctuation punctuation: String = <span class="string">"."</span>)</span></span> &#123;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"<span class="subst">\(num)</span> divided by <span class="subst">\(den)</span> equals <span class="subst">\(num/den)</span><span class="subst">\(punctuation)</span>"</span>)</span><br><span class="line">&#125;</span><br><span class="line">divisionDescription(forNumerator: <span class="number">9.0</span>, andDenominator: <span class="number">3.0</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="In-out-parameters"><a href="#In-out-parameters" class="headerlink" title="In-out parameters"></a>In-out parameters</h4><p>有时候需要改变传入函数的参数的值，这时候需要定义In-out参数，但是它不能有默认值，另外可变参数不能定义为In-out参数。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> error = <span class="string">"The request failed:"</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">appendErrorCode</span><span class="params">(code: Int, <span class="keyword">inout</span> toErrorString errorSting: String)</span></span> &#123;</span><br><span class="line">  <span class="keyword">if</span> code == <span class="number">400</span> &#123;</span><br><span class="line">    errorSting += <span class="string">" bad request."</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">appendErrorCode(<span class="number">400</span>, toErrorString: &amp;error)</span><br></pre></td></tr></table></figure>
+<h4 id="Nested-Functions-and-Scope"><a href="#Nested-Functions-and-Scope" class="headerlink" title="Nested Functions and Scope"></a>Nested Functions and Scope</h4><p>Swift支持function的嵌套定义，可以在一个function中再定义一个function，内部的function在外面是不可访问的。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">areaOfTriangle</span><span class="params">(withBase base: Double, andHeight height: Double)</span></span> -&gt; <span class="type">Double</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> numerator = base * height</span><br><span class="line">  <span class="function"><span class="keyword">func</span> <span class="title">divide</span><span class="params">()</span></span> -&gt; <span class="type">Double</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> numerator / <span class="number">2</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> divide()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Exiting-Early-from-a-Function"><a href="#Exiting-Early-from-a-Function" class="headerlink" title="Exiting Early from a Function"></a>Exiting Early from a Function</h4><p>A guard statement is used to exit early from a function if some condition is not met, hence the name guard.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">greetByMiddleName</span><span class="params">(name: <span class="params">(first: String, middle: String?, last: String)</span></span></span>) &#123;</span><br><span class="line">  <span class="keyword">guard</span> <span class="keyword">let</span> middleName = name.middle <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">"Hey there!"</span>)</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">"Hey <span class="subst">\(middleName)</span>"</span>)</span><br><span class="line">&#125;</span><br><span class="line">greetByMiddleName((<span class="string">"Matt"</span>, <span class="string">"Danger"</span>, <span class="string">"Mathias"</span>))</span><br></pre></td></tr></table></figure>
+<p>如果middle中有值，则执行guard之后的print，如果middle中没有值，则执行guard中的语句并提早从function中return。</p>
+<h3 id="Closures"><a href="#Closures" class="headerlink" title="Closures"></a>Closures</h3><p>Closures are discrete bundles of functionality that can be used in your application to accomplish specific tasks.</p>
+<p>You can think of a function as a named closure.</p>
+<h4 id="Closures-Syntax"><a href="#Closures-Syntax" class="headerlink" title="Closures Syntax"></a>Closures Syntax</h4><p>给数组排序</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> volunteerCounts = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">40</span>, <span class="number">32</span>, <span class="number">2</span>, <span class="number">53</span>, <span class="number">77</span>, <span class="number">13</span>]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sortAscending</span><span class="params">(i: Int, j: Int)</span></span> -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> i &lt; j</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> volunteersSorted = volunteerCounts.<span class="built_in">sort</span>(sortAscending)</span><br></pre></td></tr></table></figure>
+<p>sortAscending提供了针对数组中元素的比较规则，sortAscending就是一个closure.</p>
+<h4 id="Closure-Expression-Syntax"><a href="#Closure-Expression-Syntax" class="headerlink" title="Closure Expression Syntax"></a>Closure Expression Syntax</h4><p>{(parameters) -&gt; return type in<br>  //Code<br>}</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> volunteersSorted = volunteerCounts.<span class="built_in">sort</span>(&#123;</span><br><span class="line">  (i: <span class="type">Int</span>, j: <span class="type">Int</span>) -&gt; <span class="type">Bool</span> <span class="keyword">in</span></span><br><span class="line">  <span class="keyword">return</span> i &lt; j</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>Closures 能够使用swift的类型推断，所以参数的类型可以省略</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> volunteersSorted = volunteerCounts.<span class="built_in">sort</span>(&#123;i, j <span class="keyword">in</span> i &lt; j&#125;)</span><br></pre></td></tr></table></figure>
+<p>这个Closure只有一个表达式，因此可以删掉return关键字，如果closure的表达式多于一个，那么必须使用return关键字。</p>
+<p>Swift provides shorthand argument names that you can refer to inline closure expressions. These shorthand argument names behave similarly to the explicitly declared arguments you have been using: they have the same types and values. The complier’s type inference capabilities help it know the number and types of arguments your closure takes, which means it is not necessary to name them.</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> volunteersSorted = volunteersCount.<span class="built_in">sort</span>(&#123;$<span class="number">0</span> &lt; $<span class="number">1</span>&#125;)</span><br></pre></td></tr></table></figure>
+<p>编译器知道sort需要一个closure类型的参数，这个closure的参数类型和数组里面的元素类型是一样的，closure有两个参数，他们的值的比较结果决定了排序顺序，因此可以用$0代表第一个参数，$1代表第二个参数。</p>
+<p>If a closure is passed to a function’s final argument, it can be written inline, outside of and after the function’s parentheses.<br>如果closure是一个function的最后一个参数，那么它能写在function的括号以外。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Cocoa</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> volunteersCounts = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">40</span>, <span class="number">32</span>, <span class="number">2</span>, <span class="number">53</span>, <span class="number">77</span>, <span class="number">13</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> volunteersSorted = volunteersCounts.<span class="built_in">sort</span> &#123;$<span class="number">0</span> &lt; $<span class="number">1</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>It is always more important to make sure that your code is readable and maintainable.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Swift/" rel="tag">#Swift</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/04/sourceofruby/" rel="next" title="注意切换Ruby的淘宝镜像">
+                <i class="fa fa-chevron-left"></i> 注意切换Ruby的淘宝镜像
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/01/29/Swift/"
+           data-title="Swift学习笔记" data-url="http://myzle.github.io/2016/01/29/Swift/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="Myzle" />
+          <p class="site-author-name" itemprop="name">Myzle</p>
+          <p class="site-description motion-element" itemprop="description">Be all you can be!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/myzle" target="_blank">
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Myzle</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.4.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.4.4"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.4.4"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.4.4"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"myzle"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

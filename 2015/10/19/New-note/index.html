@@ -1,0 +1,1044 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.4.4" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="iOS," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Myzle's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.4" />
+
+
+
+
+
+
+<meta name="description" content="Objective-C Programming: The Big Nerd Ranch Guide (2nd Edition)
+When you run a program, a file is copied from the file system into memory (RAM), and the instructions in that file are executed by your">
+<meta property="og:type" content="article">
+<meta property="og:title" content="读书笔记">
+<meta property="og:url" content="http://myzle.github.io/2015/10/19/New-note/index.html">
+<meta property="og:site_name" content="Myzle's Blog">
+<meta property="og:description" content="Objective-C Programming: The Big Nerd Ranch Guide (2nd Edition)
+When you run a program, a file is copied from the file system into memory (RAM), and the instructions in that file are executed by your">
+<meta property="og:updated_time" content="2015-12-23T05:12:06.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="读书笔记">
+<meta name="twitter:description" content="Objective-C Programming: The Big Nerd Ranch Guide (2nd Edition)
+When you run a program, a file is copied from the file system into memory (RAM), and the instructions in that file are executed by your">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: "post",
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 读书笔记 | Myzle's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?41f2ac3e7c22ef73312321800c11b369";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+
+  <div class="container one-collumn  page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Myzle's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                读书笔记
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-10-19T11:59:46+08:00" content="2015-10-19">
+              2015-10-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/10/19/New-note/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/19/New-note/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Objective-C-Programming-The-Big-Nerd-Ranch-Guide-2nd-Edition"><a href="#Objective-C-Programming-The-Big-Nerd-Ranch-Guide-2nd-Edition" class="headerlink" title="Objective-C Programming: The Big Nerd Ranch Guide (2nd Edition)"></a><a href="http://www.amazon.com/Objective-C-Programming-Ranch-Guide-Guides/dp/032194206X/ref=sr_1_1?ie=UTF8&amp;qid=1445225336&amp;sr=8-1&amp;keywords=OBJECTIVE-C+PROGRAMMING" target="_blank" rel="external">Objective-C Programming: The Big Nerd Ranch Guide (2nd Edition)</a></h2><ul>
+<li><p>When you run a program, a file is copied from the file system into memory (RAM), and the instructions in that file are executed by your computer.</p>
+</li>
+<li><p>The very lowest-level programming language is called assembly code.</p>
+</li>
+<li><p>The life of a programmer is mostly a never-ending struggle. Solving problems in an always-changing technical landscape means that programmers are always learning new things.</p>
+</li>
+<li><p>Most professional programmers learn to struggle hour after hour, day after day, without getting (too) frustrated. This is another skill that will serve you well.</p>
+</li>
+<li><p>Anything that is executable on a computer we call a program. Some programs have graphical user interfaces; we call these applications.Some programs have no graphical user interface and run for days in the background; we call these daemons.Some programs have no graphical user interface and run for a short time in the terminal; we call these command-line tools.</p>
+</li>
+<li><p>A function is a list of instructions for the computer to execute, and every function has a name.</p>
+</li>
+<li><p>Code is the set of instructions that tell the computer to do something.</p>
+</li>
+<li><p>Comments are ignored by the computer, but we programmers use them to document code we have written. </p>
+</li>
+<li><p>Syntax is the set of rules that governs how code must be written in a given programming language. </p>
+</li>
+<li><p>A program is a collection of functions. A function is a list of operations for the processor to execute.</p>
+</li>
+<li><p>When you write a program in C (which is relatively pleasant for you), the compiler converts your program’s functions into machine code (which is pleasant and efficient for the processor). </p>
+</li>
+<li><p>As we get older, we are baffled much less often – not because we know everything, but because we tend to steer away from things that leave us bewildered.</p>
+</li>
+<li><p>A place where one piece of data can go is known as a variable.</p>
+</li>
+<li><p>In a program, you create a new variable by declaring its type and name.</p>
+</li>
+<li><p>An expression is something that gets evaluated and results in some value.</p>
+</li>
+<li><p>In C, it was decided that 0 would represent false, and anything that is not zero would be considered true.</p>
+</li>
+<li><p>A function is a name associated with a chunk of code. </p>
+</li>
+<li><p>Values passed to a function are known as arguments. The argument’s value is then assigned to the corresponding parameter name. That parameter name can be used inside the function as a variable that contains the passed-in value.</p>
+</li>
+<li><p>Partitioning your code into functions makes it easier to make changes and to find and fix bugs. You can make a change or fix a typo in one place, and it will have the effects you want everywhere you call that function.</p>
+</li>
+<li><p>A program is a collection of functions. When you run a program, those functions are copied from the hard drive into memory, and the processor finds the function called “main” and executes it.</p>
+</li>
+<li><p>Local variables are variables declared inside a function.They exist only during the execution of that function and can only be accessed from within that function.A function can have many local variables, and all of them are stored in the frame for that function. Think of the frame as a blackboard that you can scribble on while the function is running. When the function is done executing, the blackboard is discarded.</p>
+</li>
+<li><p>Programmers use the word stack to describe where the frames are stored in memory.</p>
+</li>
+<li><p>When a function is called, its frame is pushed onto the top of the stack. When a function finishes executing, we say that it returns. That is, it pops its frame off the stack and lets the function that called it resume execution.</p>
+</li>
+<li><p>You can use the debugger to browse the frames on the stack.</p>
+</li>
+<li><p>When you return 0 to the system, you are saying “Everything went OK.” If you are terminating the program because something has gone wrong, you return 1.</p>
+</li>
+<li><p>A static variable is like a global variable in that it is declared outside of any function.</p>
+</li>
+<li><p>A static variable is only accessible from the code in the file where it was declared. </p>
+</li>
+<li><p>Your computer is, at its core, a processor (the Central Processing Unit or CPU) and a vast meadow of switches (the Random-Access Memory or RAM) that can be turned on or off by the processor. We say that a switch holds one bit of information. You will often see 1 used to represent “on” and 0 used to represent “off.”</p>
+</li>
+<li><p>Eight of these switches make a byte of information.</p>
+</li>
+<li><p>The processor can fetch the state of these switches, do operations on the bits, and store the result in another set of switches. </p>
+</li>
+<li><p>The address of a variable is the location in memory where the value for that variable is stored. </p>
+</li>
+<li><p>Memory addresses are nearly always printed in hexadecimal format.</p>
+</li>
+<li><p>Notice that the asterisk is used two different ways in this example:</p>
+</li>
+<li><p>When you declared addressOfI to be an int *. That is, you told the compiler “It will hold an address where an int can be stored.”</p>
+</li>
+<li><p>When you read the int value that is stored at the address stored in addressOfI. (Pointers are also called references. Thus, using the pointer to read data at the address is sometimes called dereferencing the pointer.)</p>
+</li>
+<li><p>Sometimes you need a pointer to nothing. That is, you have a variable that can hold an address, and you want to store something in it that makes it explicit that the variable is not set to anything. We use NULL for this</p>
+</li>
+<li>What is NULL? Remember that an address is just a number. NULL is zero.</li>
+<li>A typedef defines an alias for a type declaration and allows you to use it more like the usual data types.</li>
+<li>So far, your programs have used one kind of memory – frames on the stack. Recall that every function has a frame where its local variables are stored. This memory is automatically allocated when a function starts and automatically deallocated when the function ends. In fact, local variables are sometimes called automatic variables because of this convenient behavior.</li>
+<li>Sometimes, however, you need to claim a contiguous chunk of memory yourself – a buffer. Programmers often use the word buffer to mean a long line of bytes of memory. The buffer comes from a region of memory known as the heap, which is separate from the stack.</li>
+<li>You request a buffer of memory using the function malloc(). When you are done using the buffer, you call the function free() to release your claim on that memory and return it to the heap.</li>
+<li>A framework is library of classes that you use to write programs.</li>
+<li>An object is similar to a struct (such as the struct Person you created in Chapter 11). Like a struct, an object can contain several pieces of related data. In a struct, we called them members. In an object, we call them instance variables (or you might hear “ivars”).</li>
+<li>An object differs from a struct in that an object can also have its own functions that act on the data it contains. These functions are called methods.</li>
+<li>A class defines a kind of object. It also produces objects of that kind. You can think of a class as both blueprint and factory.</li>
+<li>What is the difference between #import and #include? #import is faster and more efficient.</li>
+<li>In Objective-C, to execute the code in a method, you send a message to the object or class that has that method.</li>
+<li>A message send is surrounded by square brackets and has two parts: the receiver and the selector.</li>
+<li>Why 1970? OS X and iOS are based on Unix, and 1970 is the start of the “Unix epoch.”</li>
+<li>Typically, class methods create an instance of the class and initialize its instance variables.</li>
+<li>Typically, instance methods give you information about or perform an operation on an instance’s instance variables.</li>
+<li>Message sends can be nested.</li>
+<li>When message sends are nested, the system will handle the message send on the inside first and then the message that contains it.</li>
+<li>The alloc method is a class method that every class has. It returns a pointer to a new instance that needs to be initialized. An uninitialized instance may exist in memory, but it is not ready to receive messages. The init method is an instance method that every class has. It initializes an instance so that it is ready to work.</li>
+<li>Nearly all object-oriented languages have the idea of nil, the pointer to no object.</li>
+<li>They really are the same thing: the zero pointer. By convention, though, we use nil when referring to the value of an empty pointer declared as pointing to an Objective-C object type, and NULL when referring to any other pointer, such as to a struct.</li>
+<li>When Objective-C was designed, it was decided that sending a message to nil would be OK; it would simply do nothing.</li>
+<li>Important thing #1: If you are sending messages and nothing is happening, make sure you are not sending messages to a pointer that has been set to nil.</li>
+<li>Important thing #2: If you send a message to nil, the return value is meaningless and should be disregarded.</li>
+<li>Notice that there is no asterisk in this declaration. id implies the asterisk.</li>
+<li>Objects can only be accessed via a pointer,</li>
+<li>However, is important to remember that the pointer and the object that it points at are not the same thing. Here is a more accurate statement: “now is a pointer that can hold an address of a location in memory where an instance of NSDate lives.”</li>
+<li>If you lose your only pointer to an object, then you can no longer access it – even if it continues to exist on the heap.</li>
+<li>When we talk about memory management, we are talking about managing heap memory.</li>
+<li>The stack is an orderly stack of frames. Each frame is automatically deallocated when the function using it ends. The heap, on the other hand, is a heaping pile of memory, and that is where your objects live.</li>
+<li>“reference” is another word for pointer</li>
+<li>Each object keeps a count of how many references to itself there are. When this reference count reaches zero, the object knows it is no longer needed and will self-destruct.</li>
+<li>When your project has ARC enabled, the compiler adds code to your project to tell each object when it gains or loses a reference.</li>
+<li>As long as you have a pointer to an object, you can be sure that it will continue to exist.</li>
+<li>You can only add or remove a reference to the object. The object will destroy itself when its reference count reaches zero.</li>
+<li>An object also loses a reference when the pointer variable itself is destroyed.</li>
+<li>To insert non-ASCII characters, use \u followed by the Unicode number for that character in hexadecimal.</li>
+<li>An instance of NSMutableArray is similar to an instance of NSArray, but you can add, remove, and reorder pointers. (NSMutableArray is a subclass of NSArray.</li>
+<li>Remember that a class describes objects in two ways: instance variables within each instance of the class and methods implemented by the class.</li>
+<li>In object-oriented thinking, however, code that is outside of a class should not directly read or write to the instance variables of an instance of that class. Only code within the class can do that.</li>
+<li>A getter method, or getter, allows code outside of a class to read, or get, the value of an instance variable.</li>
+<li>A setter method, or setter, allows code outside of a class to change, or set, the value of an instance variable.</li>
+<li>Setter and getter methods are collectively known as accessor methods, or simply accessors.</li>
+<li>Self is a pointer to the object that is running the method. It is used when an object wants to send a message to itself.</li>
+<li>Properties are either atomic or nonatomic. The difference has to do with multithreading, which is a topic beyond the scope of this book. All of the properties that you will declare in this book will be nonatomic.</li>
+<li>Sometimes a class needs a “read-only” property – a property whose value can be read but not changed. A property like this should have a getter method but no setter method. You can instruct the compiler to create only a getter method by including a readonly value in the list of property attributes.</li>
+<li>However, you did not have to include the readwrite attribute because readwrite is the default value. Default values are optional in declarations.</li>
+<li>Practically speaking, whenever you declare a property that points to an NSString or an NSArray, you should include the copy attribute.</li>
+<li>It is critical to remember, however, that when using dot notation with an object, a message is being sent.</li>
+<li>You override an inherited method by writing a new implementation.</li>
+<li>when you override a method, you can only change its implementation. You cannot change how it is declared; the method’s name, return type, and argument types must stay the same.</li>
+<li>Every object’s isa pointer points at the class that created it.</li>
+<li>When you send a message to an object, you kick off a search for a method of that name. The search follows the object’s isa pointer to start looking for the method in the object’s class. If there is no method of that name there, then it is on to the superclass. The hunt stops when the method is found or when the top of the hierarchy (NSObject) is reached.</li>
+<li>When you use the super directive, you are sending a message to the current object but saying, “Run a method with this name, but start the search for its implementation at your superclass.”</li>
+<li>An object instance variable points to another object and describes a relationship between the two objects.</li>
+<li>Objects do not live inside other objects. The employee object contains its employee ID (the variable and the value itself), but it only knows where its spouse lives in memory.</li>
+<li>There are two important side-effects to objects pointing to – rather than containing – other objects:</li>
+<li>One object can take on several roles.</li>
+<li>You end up with a lot of distinct objects using up your program’s memory. You need the objects being used to stay around, but you want the unnecessary ones to be deallocated (have their memory returned to the heap) so that their memory can be reused.</li>
+<li>When an object has an object instance variable, the object with the pointer is said to own the object that is being pointed to.</li>
+<li>When an object has zero owners, it figures no one needs it around anymore and deallocates itself.</li>
+<li>The header is where a class advertises its properties and methods so that other objects will know how to interact with it.</li>
+<li>Some properties or methods may only be intended for use by the class or instances of the class. Such internal details are better declared in a class extension. A class extension is a set of declarations that is private. Only the class or instances of the class are able to use the properties, instance variables, or methods declared in a class extension.</li>
+<li>A subclass has no access to its superclass’s class extensions.</li>
+<li>When a class declares a property in its header, only the accessors for this property are visible to other objects.</li>
+<li>Strong reference cycles are a very common source of memory leaks.</li>
+<li>How do you fix a strong reference cycle? Use a weak reference. A weak reference is a pointer that does not imply ownership.</li>
+<li>In a parent-child relationship, the general rule for preventing this type of strong reference cycle is the parent owns the child, but the child should not own the parent.</li>
+<li>A strong reference will keep the object it points to from being deallocated. A weak reference will not. Thus instance variables and properties that are marked as weak are pointing at objects that might go away. If this happens, that instance variable or property will be set to nil, instead of continuing to point to where the object used to live.</li>
+<li>Sets are faster at testing object membership than arrays are.</li>
+<li>An NSSet is immutable — you cannot add or remove objects after the set has been created. NSMutableSet is the subclass that adds the ability to add and remove objects from a set.</li>
+<li>Identical objects are always equal. Equal objects are not always identical.</li>
+<li>Using an immutable collection conserves memory and improves performance because that collection never needs to be copied.</li>
+<li>An immutable collection also claims ownership of its objects, but the immutability of the collection means that all the objects in the collection are owned when the collection is created and disowned when the collection is deallocated.</li>
+<li>What is the difference between #include and #import? #import ensures that the preprocessor only includes a file once. #include will allow you to include the same file many times. C programmers tend to use #include. Objective-C programmers tend to use #import.</li>
+<li>When you use #define to do function-like stuff instead of simply substituting a value, you are creating a macro.</li>
+<li>A pointer comparison is faster than a message send and scanning two strings character-by-character</li>
+<li>A callback lets you write a piece of code and then associate that code with a particular event. When the event happens, your code is executed.</li>
+<li>In Objective-C, there are four forms that a callback can take:</li>
+</ul>
+<ul>
+<li><ul>
+<li>Target-action: Before the wait begins, you say “When this event happens, send this message to this object.” The object receiving the message is the target. The selector for the message is the action.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><ul>
+<li>Helper objects: Before the wait begins, you say “Here is an object that will take on a role that helps another object do its job. When one of the events related to this role occurs, send a message to the helper object.” Helper objects are often known as delegates or data sources.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><ul>
+<li>Notifications: There is an object called the notification center. When an event happens, a notification associated with that event will be posted to the notification center. Before the wait begins, you tell the notification center “This object is interested in this kind of notification. When one is posted, send this message to the object.”</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><ul>
+<li>Blocks: A block is a just a chunk of code to be executed. Before the wait begins, you say “Here is a block. When this event happens, execute this block.”</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>When sending one callback to one object, Apple uses target-action. When sending an assortment of callbacks to one object, Apple uses a helper object with a protocol. These helper objects are typically called delegates or data sources.</li>
+<li>Objects that do just one thing (like NSTimer) use target-action.</li>
+<li>Objects that have more complicated lives (like an NSURLConnection) use helper objects, and the most common type of helper object is the delegate.</li>
+<li>Objects that might need to trigger callbacks in several other objects (like NSTimeZone) use notifications.</li>
+<li>A block is a chunk of code.</li>
+<li>You can pass a block as an argument to a method that accepts a block. Many of Apple’s classes have methods that accept blocks as arguments.</li>
+<li>Blocks, on the other hand, keep the code to be triggered by an event close by.</li>
+<li>An anonymous block is a block that you pass directly to a method without assigning it to a block variable first.</li>
+<li>At their deepest darkest cores, objects are actually structs.</li>
+<li>Don’t access instance variables directly. Use your accessors!</li>
+<li>the class of an object is different from its role in a working system.</li>
+<li>A protocol can specify a role that an object can fill.</li>
+<li>The compiler considers an object to have successfully conformed to a protocol if the object has implemented all of the protocol’s required methods.</li>
+<li>A GUI-based application is event-driven. When the application is launched, it starts a run loop that sits and waits for events. Events can be generated by the user (like a button tap) or by the system (like a low-memory warning). When an event happens, the application leaps into action to respond to the specific event. All iOS applications are event-driven applications.</li>
+<li>The “app delegate” is the starting point of an application, and every iOS application has one.</li>
+<li>Model-View-Controller, or MVC, is a design pattern that is based on the idea that any class that you create should fall into one of three job categories: model, view, or controller.</li>
+<li>When an iOS application first launches, a lot of setup is happening behind the scenes. An instance of UIApplication is created to control the application’s state and act as liaison to the operating system. An instance of BNRAppDelegate is also created and set as the delegate of the UIApplication instance (which explains the name “app delegate”).</li>
+<li>A control is a view that the user can interact with.</li>
+<li>This statement tells you that IBAction is replaced with void before the compiler sees it. All IBAction keywords can replaced with void because actions invoked by user interface controls are not expected to have a return value.</li>
+<li>“Outlet” is just another word for “object pointer.”</li>
+<li>You send the init message to the new instance so that it can initialize its instance variables to usable values; alloc creates the space for an object, and init makes the object ready to work. Notice that init is an instance method that returns the address of the initialized object. It is the initializer for NSObject.</li>
+<li>In the first line of init, you set self to point to the object returned from the superclass’s init method.</li>
+<li>You check that the superclass’s initializer returns a valid object and not nil.</li>
+<li>The init method figures out a clever optimization that it can do, deallocates the original object, allocates a different object, and returns the new object.</li>
+<li>To address this possibility, Apple requires that you set self to point to the object returned from the superclass’s initializer.</li>
+<li>The init method fails, deallocates the object, and returns nil.</li>
+<li>To deal with this possibility, Apple recommends that you check that the superclass’s initializer returns a valid object and not nil. After all, there is no point in performing custom set-up on an object that does not exist.</li>
+<li>When you create a subclass, you typically only need to initialize the instance variables that the subclass introduced; let the superclass take care of the instance variables that it introduced.</li>
+<li>The designated initializer acts as a funnel-point. A class has only one designated initializer method. If the class has other initializers, then the implementation of those initializers must call (directly or indirectly) the designated initializer.</li>
+<li><ul>
+<li>If a class has several initializers, only one should do the real work. That method is known as the designated initializer. All other initializers should call, either directly or indirectly, the designated initializer.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><ul>
+<li>The designated initializer will call the superclass’s designated initializer before initializing its instance variables.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><ul>
+<li>If the designated initializer of your class has a different name than the designated initializer of its superclass, you must override the superclass’s designated initializer so that it calls the new designated initializer.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><ul>
+<li>If you have several initializers, clearly document which is the designated initializer in the header.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>A property can be declared readwrite or readonly. The default is readwrite, which means that both a setter and a getter method are created. If you do not want a setter method to be created, you mark the property as readonly</li>
+</ul>
+<ul>
+<li>A property can also be declared unsafe_unretained, assign, strong, weak, or copy. This option determines how the setter handles the property’s memory management.</li>
+</ul>
+<ul>
+<li>assign is the default for non-object types and the simplest: it just assigns the passed-in value to the property</li>
+</ul>
+<ul>
+<li>You will always use assign for properties that hold non-objects. Because it is the default for non-object types, you do not have to add it to your property declaration.</li>
+</ul>
+<ul>
+<li>strong, as you learned in Chapter 23, will ensure that a strong reference is kept to the passed-in object. It will also let go of ownership of the old object (which will then deallocate itself if it has no other owners).</li>
+</ul>
+<ul>
+<li>For object properties, strong is the default for object pointers, and that is usually what you want.</li>
+</ul>
+<ul>
+<li>weak does not imply ownership of the object pointed to. If this object is deallocated, then the property will be set to nil.</li>
+</ul>
+<ul>
+<li>A dangling pointer points to an object that no longer exists. Sending a message to a dangling pointer usually crashes your program.</li>
+</ul>
+<ul>
+<li>unsafe_unretained properties, like weak properties, do not imply ownership. However, an unsafe_unretained property is not automatically set to nil when the object that it points to is deallocated.</li>
+</ul>
+<ul>
+<li>The copy option makes a copy of an object and then changes the pointer to refer to this copy.</li>
+</ul>
+<ul>
+<li>Use of the copy attribute is most common with object types that have mutable subclasses.</li>
+</ul>
+<ul>
+<li>What if the object passed in is not mutable? It seems wasteful to make a copy of an immutable object. The copy method just calls copyWithZone: and passes nil as the argument.</li>
+</ul>
+<ul>
+<li>For objects that come in mutable and immutable versions, the copy method returns an immutable copy. For example, NSMutableString has a copy method that returns an instance of NSString. If you want the copy to be a mutable object, use the mutableCopy method.</li>
+</ul>
+<ul>
+<li>the nonatomic option will make your setter method run a tiny bit faster.</li>
+</ul>
+<ul>
+<li>You should always make your readwrite properties nonatomic</li>
+</ul>
+<ul>
+<li>There are two reasonable cases to implement an accessor yourself:</li>
+</ul>
+<ul>
+<li><ul>
+<li>You need to update the app’s user interface when the change occurs.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><ul>
+<li>You need to update some cached info when the change occurs.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>If you declare a property and implement both accessors yourself, the compiler will not synthesize an instance variable.</li>
+</ul>
+<ul>
+<li>Key-value coding is the ability to read and set a property using its name. The key-value coding methods are defined in NSObject, and thus every object has this capability.</li>
+</ul>
+<ul>
+<li>Key-value observing is a technique that lets you get a notification when a particular property of an object changes.</li>
+</ul>
+<ul>
+<li>When you add yourself as an object’s observer, you specify the name of the property you are observing. You can also specify some options. In particular, you can tell the object to send you the old and/or new value of the property when you are notified of the change.</li>
+</ul>
+<ul>
+<li>Categories let a programmer add methods to any existing class.</li>
+</ul>
+<ul>
+<li>When you implement a method using a category, it replaces any method with the same name that already exists on the class.</li>
+</ul>
+<ul>
+<li>You should use categories to add functionality to existing classes. Do not use them to replace functionality in existing classes; use subclassing instead.</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/10/15/New-post/" rel="next" title="回忆">
+                <i class="fa fa-chevron-left"></i> 回忆
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/31/Endofyear/" rel="prev" title="2015 See you again!">
+                2015 See you again! <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/10/19/New-note/"
+           data-title="读书笔记" data-url="http://myzle.github.io/2015/10/19/New-note/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="Myzle" />
+          <p class="site-author-name" itemprop="name">Myzle</p>
+          <p class="site-description motion-element" itemprop="description">Be all you can be!</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/myzle" target="_blank">
+                  
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="http://creativecommons.org/licenses/by-nc-sa/4.0" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Myzle</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.4.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.4.4"></script>
+
+
+
+  
+  
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.4.4"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.4.4"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"myzle"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>

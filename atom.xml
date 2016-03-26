@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Myzle&#39;s Blog</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://myzle.github.io/"/>
+  <updated>2016-02-04T04:02:15.000Z</updated>
+  <id>http://myzle.github.io/</id>
+  
+  <author>
+    <name>Myzle</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Swift学习笔记</title>
+    <link href="http://myzle.github.io/2016/01/29/Swift/"/>
+    <id>http://myzle.github.io/2016/01/29/Swift/</id>
+    <published>2016-01-29T05:23:47.000Z</published>
+    <updated>2016-02-04T04:02:15.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/64bd2d1bjw1f0gb4p245ej20c20h8mxu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Getting-Started&quot;&gt;&lt;a href=&quot;#Getting-Started&quot; class=&quot;headerlink&quot; title=&quot;Getting Started&quot;&gt;&lt;/a&gt;Getting Started&lt;/h3&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; str = &lt;span class=&quot;string&quot;&gt;&quot;Hello, playground&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;str += &lt;span class=&quot;string&quot;&gt;&quot;!&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;用let定义常量&lt;br&gt;用var定义变量&lt;br&gt;swift支持类型推断，定义的时候可以不写具体的类型，但是要付给初始值。&lt;/p&gt;
+&lt;p&gt;print()用来输出数据到console， print()是函数（function）&lt;/p&gt;
+&lt;h3 id=&quot;Types-Constants-and-Variables&quot;&gt;&lt;a href=&quot;#Types-Constants-and-Variables&quot; class=&quot;headerlink&quot; title=&quot;Types, Constants, and Variables&quot;&gt;&lt;/a&gt;Types, Constants, and Variables&lt;/h3&gt;&lt;p&gt;需要改改变的值定义成变量，不需要改变的值定义成常量。&lt;br&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; numberOfStoplights: &lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt; = &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; population: &lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;population = &lt;span class=&quot;number&quot;&gt;5422&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;“ \ ()” 用来在一个string中插入常量或者变量的值&lt;/p&gt;
+&lt;h3 id=&quot;Conditionals&quot;&gt;&lt;a href=&quot;#Conditionals&quot; class=&quot;headerlink&quot; title=&quot;Conditionals&quot;&gt;&lt;/a&gt;Conditionals&lt;/h3&gt;&lt;p&gt; x = a ? b : c&lt;br&gt; 如果a是true，x ＝ b，否则x ＝ c&lt;br&gt; if可以嵌套&lt;/p&gt;
+&lt;h3 id=&quot;Numbers&quot;&gt;&lt;a href=&quot;#Numbers&quot; class=&quot;headerlink&quot; title=&quot;Numbers&quot;&gt;&lt;/a&gt;Numbers&lt;/h3&gt;&lt;p&gt; OS X中，Int是64 bit长的，使用Int时要注意不要越界&lt;/p&gt;
+&lt;p&gt; 声明Int型的实例（instance）&lt;br&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; numberOfPages： &lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt; ＝ &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Switch&quot;&gt;&lt;a href=&quot;#Switch&quot; class=&quot;headerlink&quot; title=&quot;Switch&quot;&gt;&lt;/a&gt;Switch&lt;/h3&gt; &lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; statusCode: &lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt; = &lt;span class=&quot;number&quot;&gt;404&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; errorString: string&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;switch&lt;/span&gt; statusCode &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;400&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    errorString = &lt;span class=&quot;string&quot;&gt;&quot;Bad request&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;401&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    errorString = &lt;span class=&quot;string&quot;&gt;&quot;Unauthorized&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;403&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    errorString = &lt;span class=&quot;string&quot;&gt;&quot;Forbidden&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;404&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    errorString = &lt;span class=&quot;string&quot;&gt;&quot;Not found&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;default&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    errorString = &lt;span class=&quot;string&quot;&gt;&quot;None&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;swift中的switch不需要break，如果某一个case条件match，就执行对应的代码，然后开始执行switch之后的代码&lt;/p&gt;
+&lt;h4 id=&quot;ranges&quot;&gt;&lt;a href=&quot;#ranges&quot; class=&quot;headerlink&quot; title=&quot;ranges&quot;&gt;&lt;/a&gt;ranges&lt;/h4&gt;&lt;p&gt;valueX…valueY&lt;/p&gt;
+&lt;h4 id=&quot;where&quot;&gt;&lt;a href=&quot;#where&quot; class=&quot;headerlink&quot; title=&quot;where&quot;&gt;&lt;/a&gt;where&lt;/h4&gt;&lt;p&gt;where提供了在switch中附加判断条件的能力&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; unknownCode &lt;span class=&quot;keyword&quot;&gt;where&lt;/span&gt; (unknownCode &amp;gt;= &lt;span class=&quot;number&quot;&gt;200&lt;/span&gt; &amp;amp;&amp;amp; unknownCode &amp;lt; &lt;span class=&quot;number&quot;&gt;300&lt;/span&gt;) || unknownCode &amp;gt; &lt;span class=&quot;number&quot;&gt;505&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    errorString = &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;subst&quot;&gt;\(unknownCode)&lt;/span&gt; is not a known error code.&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;tuple&lt;/p&gt;
+&lt;p&gt;一组逻辑相关的值构成一个元组&lt;br&gt;（statusCode, errorString)&lt;br&gt;如果元组中使用了下划线，表示这个值可以是任意值&lt;br&gt;（404， _ )&lt;/p&gt;
+&lt;h3 id=&quot;Loops&quot;&gt;&lt;a href=&quot;#Loops&quot; class=&quot;headerlink&quot; title=&quot;Loops&quot;&gt;&lt;/a&gt;Loops&lt;/h3&gt;&lt;h4 id=&quot;for-in&quot;&gt;&lt;a href=&quot;#for-in&quot; class=&quot;headerlink&quot; title=&quot;for-in&quot;&gt;&lt;/a&gt;for-in&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; myFirstInt: &lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt; = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;...&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ++myFirstInt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(myFirstInt)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;for-case&quot;&gt;&lt;a href=&quot;#for-case&quot; class=&quot;headerlink&quot; title=&quot;for case&quot;&gt;&lt;/a&gt;for case&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;...&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;where&lt;/span&gt; i % &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;把1…100中所有能被3整除的数字打印出来&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;...&lt;span class=&quot;number&quot;&gt;100&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; i % &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; == &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(i)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这两段代码是等价的，但是第一种可读性更好，代码也更简洁&lt;/p&gt;
+&lt;h4 id=&quot;for-Loops&quot;&gt;&lt;a href=&quot;#for-Loops&quot; class=&quot;headerlink&quot; title=&quot;for Loops&quot;&gt;&lt;/a&gt;for Loops&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;; ++i &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ++myFirstInt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(myFirstInt)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;while-Loops&quot;&gt;&lt;a href=&quot;#while-Loops&quot; class=&quot;headerlink&quot; title=&quot;while Loops&quot;&gt;&lt;/a&gt;while Loops&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; i &amp;lt; &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ++myFirstInt&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(myFirstInt)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ++i&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;break 跳出循环，执行循环后面的代码&lt;br&gt;continue 结束本次循环，继续下次循环&lt;/p&gt;
+&lt;h3 id=&quot;Strings&quot;&gt;&lt;a href=&quot;#Strings&quot; class=&quot;headerlink&quot; title=&quot;Strings&quot;&gt;&lt;/a&gt;Strings&lt;/h3&gt;&lt;p&gt;Unicode swift的String和Character类型是建立在Unicode码之上的&lt;/p&gt;
+&lt;h3 id=&quot;Optionals&quot;&gt;&lt;a href=&quot;#Optionals&quot; class=&quot;headerlink&quot; title=&quot;Optionals&quot;&gt;&lt;/a&gt;Optionals&lt;/h3&gt;&lt;p&gt;Optional是swift引入的全新概念，简单来说就是表示某个instance可能为空，如果一个常量或者变量被定义成了optional类型，就表示它可能有值，也可能为空。&lt;/p&gt;
+&lt;p&gt;swift为了安全而引入了optional，如果一个instance可能有值，也可能是nil，那么它必须被定义为optional类型，反过来说，如果一个instance没有被定义成optional，那么它一定不为空。&lt;/p&gt;
+&lt;p&gt;强制解包optioanl unwrapping&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; errorCodeString: &lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;?&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; errorCodeString != &lt;span class=&quot;literal&quot;&gt;nil&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; theError = errorCodeString!&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(theError)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;optional-Binding&quot;&gt;&lt;a href=&quot;#optional-Binding&quot; class=&quot;headerlink&quot; title=&quot;optional Binding&quot;&gt;&lt;/a&gt;optional Binding&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; errorCodeString: &lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;?&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;errorCodeString = &lt;span class=&quot;string&quot;&gt;&quot;404&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; theError = errorCodeString &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(theError)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Arrays&quot;&gt;&lt;a href=&quot;#Arrays&quot; class=&quot;headerlink&quot; title=&quot;Arrays&quot;&gt;&lt;/a&gt;Arrays&lt;/h3&gt;&lt;p&gt;Arrays are an ordered collection of values. Each position in an array is identified by an index, and any value can appear multiple times in an array.&lt;/p&gt;
+&lt;h4 id=&quot;Accessing-and-Modifying-Arrays&quot;&gt;&lt;a href=&quot;#Accessing-and-Modifying-Arrays&quot; class=&quot;headerlink&quot; title=&quot;Accessing and Modifying Arrays&quot;&gt;&lt;/a&gt;Accessing and Modifying Arrays&lt;/h4&gt;&lt;p&gt;向数组添加值&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; bucketList = [&lt;span class=&quot;string&quot;&gt;&quot;Climb Mt. Everest&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bucketList.append(&lt;span class=&quot;string&quot;&gt;&quot;Fly hot air balloon to Fiji&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;从数组删掉值&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bucketList.removeAtIndex(&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;计算数组中元素个数&lt;br&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bucketList.&lt;span class=&quot;built_in&quot;&gt;count&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;取数组中的一部分数值&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bucketList[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;...&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;在数组中插入值&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;bucketList.insert(&lt;span class=&quot;string&quot;&gt;&quot;Toboggan across Alaska&quot;&lt;/span&gt;, atIndex: &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Dictionaries&quot;&gt;&lt;a href=&quot;#Dictionaries&quot; class=&quot;headerlink&quot; title=&quot;Dictionaries&quot;&gt;&lt;/a&gt;Dictionaries&lt;/h3&gt;&lt;p&gt;字典，内部数据无顺序，都是key－value对&lt;br&gt;swift的字典要求所有的key不是是hashable的。&lt;br&gt;swift中String， Int， Float， Double， Bool都是hashable的。&lt;/p&gt;
+&lt;h4 id=&quot;Creating-a-Dictionary&quot;&gt;&lt;a href=&quot;#Creating-a-Dictionary&quot; class=&quot;headerlink&quot; title=&quot;Creating a Dictionary&quot;&gt;&lt;/a&gt;Creating a Dictionary&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; movieRatings = [&lt;span class=&quot;string&quot;&gt;&quot;Donnie Darko&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Chungking Express&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Dark City&quot;&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Accessing-and-Modifying-a-Dictionary&quot;&gt;&lt;a href=&quot;#Accessing-and-Modifying-a-Dictionary&quot; class=&quot;headerlink&quot; title=&quot;Accessing and Modifying a Dictionary&quot;&gt;&lt;/a&gt;Accessing and Modifying a Dictionary&lt;/h4&gt;&lt;p&gt;字典中key－value对的个数：movieRatings.count&lt;br&gt;从字典中获取值：movieRatings[“Donnie Darko”]&lt;br&gt;无论何时，你提供给字典一个key，它返回的都是一个optional类型的值， 可能是和这个key匹配的value，也可能是nil&lt;br&gt;update 字典中的数据：movieRatings.updateValue(5, forKey: “Donnie Darko”)&lt;/p&gt;
+&lt;h4 id=&quot;Adding-and-Removing-Values&quot;&gt;&lt;a href=&quot;#Adding-and-Removing-Values&quot; class=&quot;headerlink&quot; title=&quot;Adding and Removing Values&quot;&gt;&lt;/a&gt;Adding and Removing Values&lt;/h4&gt;&lt;p&gt;向字典中添加一个key－value对： movieRatings[“The Cabinet for Dr. Caligari” = 5]&lt;br&gt;从字典中删除一个key－value对： movieRatings.removeValueForKey(“Dark City”)&lt;/p&gt;
+&lt;h4 id=&quot;Looping&quot;&gt;&lt;a href=&quot;#Looping&quot; class=&quot;headerlink&quot; title=&quot;Looping&quot;&gt;&lt;/a&gt;Looping&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (key, value) &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; movieRatings &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;The movie &lt;span class=&quot;subst&quot;&gt;\(key)&lt;/span&gt; was rated &lt;span class=&quot;subst&quot;&gt;\(value)&lt;/span&gt;.&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;单独循环&lt;br&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; movie &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; movieRatings.keys &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;User has rated &lt;span class=&quot;subst&quot;&gt;\(movie)&lt;/span&gt;.&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h4 id=&quot;Translating-a-Dictionary-to-an-Array&quot;&gt;&lt;a href=&quot;#Translating-a-Dictionary-to-an-Array&quot; class=&quot;headerlink&quot; title=&quot;Translating a Dictionary to an Array&quot;&gt;&lt;/a&gt;Translating a Dictionary to an Array&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; watchedMovies = &lt;span class=&quot;type&quot;&gt;Array&lt;/span&gt;(movieRatings.keys)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;Sets&quot;&gt;&lt;a href=&quot;#Sets&quot; class=&quot;headerlink&quot; title=&quot;Sets&quot;&gt;&lt;/a&gt;Sets&lt;/h3&gt;&lt;h4 id=&quot;What-Is-a-Set&quot;&gt;&lt;a href=&quot;#What-Is-a-Set&quot; class=&quot;headerlink&quot; title=&quot;What Is a Set&quot;&gt;&lt;/a&gt;What Is a Set&lt;/h4&gt;&lt;p&gt;A Set is an unordered collection of distinct instances.&lt;br&gt;set中的值必须是唯一的。&lt;/p&gt;
+&lt;h4 id=&quot;Getting-a-Set&quot;&gt;&lt;a href=&quot;#Getting-a-Set&quot; class=&quot;headerlink&quot; title=&quot;Getting a Set&quot;&gt;&lt;/a&gt;Getting a Set&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; groceryBag = &lt;span class=&quot;type&quot;&gt;Set&lt;/span&gt;&amp;lt;&lt;span class=&quot;type&quot;&gt;String&lt;/span&gt;&amp;gt;()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;向Set中添加元素&lt;br&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;groceryBag.insert(&lt;span class=&quot;string&quot;&gt;&quot;Apples&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在set中循环&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; food &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; groceryBag &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(food)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;从数组构建set&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; groceryBag: &lt;span class=&quot;type&quot;&gt;Set&lt;/span&gt; = [&lt;span class=&quot;string&quot;&gt;&quot;Apples&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Oranges&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Pineapple&quot;&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;set中是否存在：groceryBag.contains(“Bananas”)&lt;br&gt;set取并集：let commonGroceryBag = groceryBag.union(friendsGroceryBag)&lt;br&gt;set取交集：let itemsToReturn = commonGroceryBag.intersect(roommatesGroceryBag)&lt;br&gt;两个set是否有交集：let disjoint = yourSecondBag.isDisjointWith(roommatesSecondBag)&lt;/p&gt;
+&lt;p&gt;###Functions&lt;/p&gt;
+&lt;p&gt;A function is a named set of code that is used to accomplish some specific task.&lt;/p&gt;
+&lt;p&gt;定义一个function&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;printGreeting&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Hello, playground.&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;printGreeting()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;function-的参数&quot;&gt;&lt;a href=&quot;#function-的参数&quot; class=&quot;headerlink&quot; title=&quot;function 的参数&quot;&gt;&lt;/a&gt;function 的参数&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;printPersonalGreeting&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(name: String)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Hello &lt;span class=&quot;subst&quot;&gt;\(name)&lt;/span&gt;, welcome to your playground.&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;printPersonalGreeting(&lt;span class=&quot;string&quot;&gt;&quot;Matt&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;printPersonalGreeting调用时，不需要使用第一个参数的名字。&lt;/p&gt;
+&lt;p&gt;By default, if you call a function with more than one parameter, the first parameter name is not used, but all others are.&lt;/p&gt;
+&lt;h4 id=&quot;外部参数名：&quot;&gt;&lt;a href=&quot;#外部参数名：&quot; class=&quot;headerlink&quot; title=&quot;外部参数名：&quot;&gt;&lt;/a&gt;外部参数名：&lt;/h4&gt;&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;divisionDescription&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(forNumerator num: Double, andDenominator den: Double)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;subst&quot;&gt;\(num)&lt;/span&gt; divided by &lt;span class=&quot;subst&quot;&gt;\(den)&lt;/span&gt; equals &lt;span class=&quot;subst&quot;&gt;\(num / den)&lt;/span&gt;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;divisionDescription(forNumerator: &lt;span class=&quot;number&quot;&gt;9.0&lt;/span&gt;, andDenominator: &lt;span class=&quot;number&quot;&gt;3.0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;外部参数用于函数调用，内部参数用于实现函数的功能。&lt;/p&gt;
+&lt;h4 id=&quot;Variadic-parameters&quot;&gt;&lt;a href=&quot;#Variadic-parameters&quot; class=&quot;headerlink&quot; title=&quot;Variadic parameters&quot;&gt;&lt;/a&gt;Variadic parameters&lt;/h4&gt;&lt;p&gt;可变参数，参数的个数不是固定的，一个function只能含有一个variadic parameters 而且必须是最后一个参数&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;printPersonalGreeting&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(names: String...)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; name &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; names &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Hello &lt;span class=&quot;subst&quot;&gt;\(name)&lt;/span&gt;, welcome to the playground&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;printPersonalGreeting(&lt;span class=&quot;string&quot;&gt;&quot;Alex&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Chris&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Drew&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Pat&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Default-parameter-values&quot;&gt;&lt;a href=&quot;#Default-parameter-values&quot; class=&quot;headerlink&quot; title=&quot;Default parameter values&quot;&gt;&lt;/a&gt;Default parameter values&lt;/h4&gt;&lt;p&gt;Swift 的参数可以有默认值，默认值应该放在函数参数列表的最后，如果一个参数有默认值，那么在调用行数的时候可以不提供这个参数的值。&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;divisionDescription&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(forNumerator num: Double, andDenominator den: Double, withPunctuation punctuation: String = &lt;span class=&quot;string&quot;&gt;&quot;.&quot;&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;subst&quot;&gt;\(num)&lt;/span&gt; divided by &lt;span class=&quot;subst&quot;&gt;\(den)&lt;/span&gt; equals &lt;span class=&quot;subst&quot;&gt;\(num/den)&lt;/span&gt;&lt;span class=&quot;subst&quot;&gt;\(punctuation)&lt;/span&gt;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;divisionDescription(forNumerator: &lt;span class=&quot;number&quot;&gt;9.0&lt;/span&gt;, andDenominator: &lt;span class=&quot;number&quot;&gt;3.0&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;In-out-parameters&quot;&gt;&lt;a href=&quot;#In-out-parameters&quot; class=&quot;headerlink&quot; title=&quot;In-out parameters&quot;&gt;&lt;/a&gt;In-out parameters&lt;/h4&gt;&lt;p&gt;有时候需要改变传入函数的参数的值，这时候需要定义In-out参数，但是它不能有默认值，另外可变参数不能定义为In-out参数。&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; error = &lt;span class=&quot;string&quot;&gt;&quot;The request failed:&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;appendErrorCode&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(code: Int, &lt;span class=&quot;keyword&quot;&gt;inout&lt;/span&gt; toErrorString errorSting: String)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; code == &lt;span class=&quot;number&quot;&gt;400&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    errorSting += &lt;span class=&quot;string&quot;&gt;&quot; bad request.&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;appendErrorCode(&lt;span class=&quot;number&quot;&gt;400&lt;/span&gt;, toErrorString: &amp;amp;error)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Nested-Functions-and-Scope&quot;&gt;&lt;a href=&quot;#Nested-Functions-and-Scope&quot; class=&quot;headerlink&quot; title=&quot;Nested Functions and Scope&quot;&gt;&lt;/a&gt;Nested Functions and Scope&lt;/h4&gt;&lt;p&gt;Swift支持function的嵌套定义，可以在一个function中再定义一个function，内部的function在外面是不可访问的。&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;areaOfTriangle&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(withBase base: Double, andHeight height: Double)&lt;/span&gt;&lt;/span&gt; -&amp;gt; &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; numerator = base * height&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;divide&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;()&lt;/span&gt;&lt;/span&gt; -&amp;gt; &lt;span class=&quot;type&quot;&gt;Double&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; numerator / &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; divide()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h4 id=&quot;Exiting-Early-from-a-Function&quot;&gt;&lt;a href=&quot;#Exiting-Early-from-a-Function&quot; class=&quot;headerlink&quot; title=&quot;Exiting Early from a Function&quot;&gt;&lt;/a&gt;Exiting Early from a Function&lt;/h4&gt;&lt;p&gt;A guard statement is used to exit early from a function if some condition is not met, hence the name guard.&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;greetByMiddleName&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(name: &lt;span class=&quot;params&quot;&gt;(first: String, middle: String?, last: String)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;guard&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; middleName = name.middle &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Hey there!&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;built_in&quot;&gt;print&lt;/span&gt;(&lt;span class=&quot;string&quot;&gt;&quot;Hey &lt;span class=&quot;subst&quot;&gt;\(middleName)&lt;/span&gt;&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;greetByMiddleName((&lt;span class=&quot;string&quot;&gt;&quot;Matt&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Danger&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;Mathias&quot;&lt;/span&gt;))&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果middle中有值，则执行guard之后的print，如果middle中没有值，则执行guard中的语句并提早从function中return。&lt;/p&gt;
+&lt;h3 id=&quot;Closures&quot;&gt;&lt;a href=&quot;#Closures&quot; class=&quot;headerlink&quot; title=&quot;Closures&quot;&gt;&lt;/a&gt;Closures&lt;/h3&gt;&lt;p&gt;Closures are discrete bundles of functionality that can be used in your application to accomplish specific tasks.&lt;/p&gt;
+&lt;p&gt;You can think of a function as a named closure.&lt;/p&gt;
+&lt;h4 id=&quot;Closures-Syntax&quot;&gt;&lt;a href=&quot;#Closures-Syntax&quot; class=&quot;headerlink&quot; title=&quot;Closures Syntax&quot;&gt;&lt;/a&gt;Closures Syntax&lt;/h4&gt;&lt;p&gt;给数组排序&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; volunteerCounts = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;53&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;77&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;sortAscending&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(i: Int, j: Int)&lt;/span&gt;&lt;/span&gt; -&amp;gt; &lt;span class=&quot;type&quot;&gt;Bool&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; i &amp;lt; j&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; volunteersSorted = volunteerCounts.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(sortAscending)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;sortAscending提供了针对数组中元素的比较规则，sortAscending就是一个closure.&lt;/p&gt;
+&lt;h4 id=&quot;Closure-Expression-Syntax&quot;&gt;&lt;a href=&quot;#Closure-Expression-Syntax&quot; class=&quot;headerlink&quot; title=&quot;Closure Expression Syntax&quot;&gt;&lt;/a&gt;Closure Expression Syntax&lt;/h4&gt;&lt;p&gt;{(parameters) -&amp;gt; return type in&lt;br&gt;  //Code&lt;br&gt;}&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; volunteersSorted = volunteerCounts.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  (i: &lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt;, j: &lt;span class=&quot;type&quot;&gt;Int&lt;/span&gt;) -&amp;gt; &lt;span class=&quot;type&quot;&gt;Bool&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; i &amp;lt; j&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Closures 能够使用swift的类型推断，所以参数的类型可以省略&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; volunteersSorted = volunteerCounts.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123;i, j &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; i &amp;lt; j&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这个Closure只有一个表达式，因此可以删掉return关键字，如果closure的表达式多于一个，那么必须使用return关键字。&lt;/p&gt;
+&lt;p&gt;Swift provides shorthand argument names that you can refer to inline closure expressions. These shorthand argument names behave similarly to the explicitly declared arguments you have been using: they have the same types and values. The complier’s type inference capabilities help it know the number and types of arguments your closure takes, which means it is not necessary to name them.&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; volunteersSorted = volunteersCount.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt;(&amp;#123;$&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;lt; $&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;编译器知道sort需要一个closure类型的参数，这个closure的参数类型和数组里面的元素类型是一样的，closure有两个参数，他们的值的比较结果决定了排序顺序，因此可以用$0代表第一个参数，$1代表第二个参数。&lt;/p&gt;
+&lt;p&gt;If a closure is passed to a function’s final argument, it can be written inline, outside of and after the function’s parentheses.&lt;br&gt;如果closure是一个function的最后一个参数，那么它能写在function的括号以外。&lt;/p&gt;
+&lt;figure class=&quot;highlight swift&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; Cocoa&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; volunteersCounts = [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;32&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;53&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;77&lt;/span&gt;, &lt;span class=&quot;number&quot;&gt;13&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;let&lt;/span&gt; volunteersSorted = volunteersCounts.&lt;span class=&quot;built_in&quot;&gt;sort&lt;/span&gt; &amp;#123;$&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; &amp;lt; $&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;It is always more important to make sure that your code is readable and maintainable.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/64bd2d1bjw1f0gb4p245ej20c20h8mxu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Getting-Started&quot;&gt;&lt;a href=&quot;#Getting-Starte
+    
+    </summary>
+    
+      <category term="iOS" scheme="http://myzle.github.io/categories/iOS/"/>
+    
+    
+      <category term="Swift" scheme="http://myzle.github.io/tags/Swift/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注意切换Ruby的淘宝镜像</title>
+    <link href="http://myzle.github.io/2016/01/04/sourceofruby/"/>
+    <id>http://myzle.github.io/2016/01/04/sourceofruby/</id>
+    <published>2016-01-04T14:34:57.000Z</published>
+    <updated>2016-01-04T15:06:45.000Z</updated>
+    
+    <content type="html">&lt;p&gt;由于众所周知的原因，在国内使用Ruby时，需要修改RubyGems源的地址。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ gem source --remove https://rubygems.org/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ gem source -a http://ruby.taobao.org/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;但是现在用gem更新cocoapods的时候会遇到一个错误&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;ERROR:  Could not find a valid gem &amp;apos;cocoapods&amp;apos; (&amp;gt;= 0), here is why:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Unable to download data from http://ruby.taobao.org/ - bad response Not Found 404 (http://ruby.taobao.org/specs.4.8.gz)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这是因为淘宝现在的ruby镜像采用了https的协议&lt;/p&gt;
+&lt;p&gt;修改步骤：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ gem sources --remove http://ruby.taobao.org/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ gem sources -a https://ruby.taobao.org/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ gem source -l&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo gem install cocoapods&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ sudo gem clean&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于众所周知的原因，在国内使用Ruby时，需要修改RubyGems源的地址。&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;
+    
+    </summary>
+    
+      <category term="Tip" scheme="http://myzle.github.io/categories/Tip/"/>
+    
+    
+      <category term="cocoapods" scheme="http://myzle.github.io/tags/cocoapods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编码能力+300%</title>
+    <link href="http://myzle.github.io/2016/01/01/firstday/"/>
+    <id>http://myzle.github.io/2016/01/01/firstday/</id>
+    <published>2016-01-01T15:18:19.000Z</published>
+    <updated>2016-02-04T04:20:50.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/64bd2d1bjw1ezketuglnyj21kw23ub29.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;元旦在家收到一个包裹&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/64bd2d1bjw1ezkeuijivfj21kw16otsv.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;原来是之前海淘的HHKB到了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/64bd2d1bjw1ezkeuyszwwj21kw23ukjl.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;感谢老婆的支持，以后编码能力提升30%😄&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/64bd2d1bjw1ezketuglnyj21kw23ub29.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;元旦在家收到一个包裹&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/
+    
+    </summary>
+    
+      <category term="玩具" scheme="http://myzle.github.io/categories/%E7%8E%A9%E5%85%B7/"/>
+    
+    
+      <category term="hhkb" scheme="http://myzle.github.io/tags/hhkb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2015 See you again!</title>
+    <link href="http://myzle.github.io/2015/12/31/Endofyear/"/>
+    <id>http://myzle.github.io/2015/12/31/Endofyear/</id>
+    <published>2015-12-31T07:50:37.000Z</published>
+    <updated>2015-12-31T09:35:58.000Z</updated>
+    
+    <content type="html">&lt;p&gt;今天是2015年的最后一天。&lt;/p&gt;
+&lt;h2 id=&quot;重回上海&quot;&gt;&lt;a href=&quot;#重回上海&quot; class=&quot;headerlink&quot; title=&quot;重回上海&quot;&gt;&lt;/a&gt;重回上海&lt;/h2&gt;&lt;p&gt;4月份，公司派我去上海出差，自2011年9月离开后，第一次去上海。时间只有短短3天，自己还把行程安排的异常紧密，除去公事以外，去自己曾经住过的两处看了看，一切还是照旧。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/64bd2d1bjw1eziyjy4294j21kw23uhdt.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;第一站选在七宝，这也是06年到上海后第一次逛的地方，还是老样子，只是商业化的气息越发浓厚了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/64bd2d1bgw1eziyl5ouj3j21kw23u7wh.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;地铁2号线直奔定西路，看了第一次自己租房的小区，门口的大爷早已换了，小区的外墙也粉刷了，这里曾留下了许多美好的回忆。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/64bd2d1bgw1eziylx4qiuj21kw23uqv5.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;中山公园，以前周末经常来这里散步，4月份北方还是一片萧索，上海已经春意盎然了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/64bd2d1bjw1eziym8b0vtj21kw16ox3o.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;去以前经常吃饭的地方吃了一次鸡，味道还和以前的一样。去了北京后从没吃到过😢。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/64bd2d1bjw1eziymnquvhj215o1jkwxd.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;环球金融中心，在上海5年，陆家嘴三兄弟一个都不曾去过，这次弥补了少许遗憾。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww4.sinaimg.cn/large/64bd2d1bjw1eziyn3nxugj21kw23uqv5.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;上海博物馆，把之前未曾看完的展厅全部逛了一遍。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww2.sinaimg.cn/large/64bd2d1bjw1eziynnl8gyj21kw23uqv5.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;浦东花木，在离开上海之前住过的小区里徘徊了一会儿，旁边的空地现在正在盖房子，估计以后窗外的视野就没有之前好了吧。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww3.sinaimg.cn/large/64bd2d1bjw1eziynz0kimj21kw23ub29.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;晚上和大学同学吃饭，丫挺好，在华为混的风生水起，还娶了个上海老婆，完美！（就是体重直线上升，😄）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/64bd2d1bjw1eziyonmrogj21kw16ox6p.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;世纪公园是必须去的，之前来过许多次，这次还是要找找感觉。嗯，感觉还在，城市中心的一抹绿地，实属不易。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/64bd2d1bjw1eziyvit3p5j21kw16o4ol.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;最后一站是F1赛程，感谢公司，让我感受了一把现场的气氛，留下最深刻的印象就是－－很吵，特吵，太他妈吵了。。。&lt;/p&gt;
+&lt;h2 id=&quot;事业&quot;&gt;&lt;a href=&quot;#事业&quot; class=&quot;headerlink&quot; title=&quot;事业&quot;&gt;&lt;/a&gt;事业&lt;/h2&gt;&lt;p&gt;14年6月加入了现在这家公司，做Windowsphone的功能测试，干了几天后就看出并非长久之计，果然11月30迎来了人生第二次裁员,只能怪自己啊。&lt;/p&gt;
+&lt;p&gt;其实一直都想做iOS的开发工作，书读了不少，代码也写了点，无奈还是不够精通，不甘心一辈子只做测试的话，只有一条路跑到黑了。&lt;/p&gt;
+&lt;p&gt;2016年，我要干点事。&lt;/p&gt;
+&lt;h2 id=&quot;自己&quot;&gt;&lt;a href=&quot;#自己&quot; class=&quot;headerlink&quot; title=&quot;自己&quot;&gt;&lt;/a&gt;自己&lt;/h2&gt;&lt;p&gt;还是写点自己吧，又老了一岁，按说越来越成熟了，能看清一些事了，很多事情一旦看清了，反而没意思，很多东西明明是错的，自己却无能为力，还是先齐家吧，然后再谈治国，平天下。&lt;/p&gt;
+&lt;p&gt;2016，唯一的愿望就是通过自己的努力，让家人过得更好一点！&lt;/p&gt;
+&lt;p&gt;2015，再见，2016，你好&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天是2015年的最后一天。&lt;/p&gt;
+&lt;h2 id=&quot;重回上海&quot;&gt;&lt;a href=&quot;#重回上海&quot; class=&quot;headerlink&quot; title=&quot;重回上海&quot;&gt;&lt;/a&gt;重回上海&lt;/h2&gt;&lt;p&gt;4月份，公司派我去上海出差，自2011年9月离开后，第一次去上海。时间只有短短3
+    
+    </summary>
+    
+      <category term="Note" scheme="http://myzle.github.io/categories/Note/"/>
+    
+    
+      <category term="Self" scheme="http://myzle.github.io/tags/Self/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>读书笔记</title>
+    <link href="http://myzle.github.io/2015/10/19/New-note/"/>
+    <id>http://myzle.github.io/2015/10/19/New-note/</id>
+    <published>2015-10-19T03:59:46.000Z</published>
+    <updated>2015-12-23T05:12:06.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;Objective-C-Programming-The-Big-Nerd-Ranch-Guide-2nd-Edition&quot;&gt;&lt;a href=&quot;#Objective-C-Programming-The-Big-Nerd-Ranch-Guide-2nd-Edition&quot; class=&quot;headerlink&quot; title=&quot;Objective-C Programming: The Big Nerd Ranch Guide (2nd Edition)&quot;&gt;&lt;/a&gt;&lt;a href=&quot;http://www.amazon.com/Objective-C-Programming-Ranch-Guide-Guides/dp/032194206X/ref=sr_1_1?ie=UTF8&amp;amp;qid=1445225336&amp;amp;sr=8-1&amp;amp;keywords=OBJECTIVE-C+PROGRAMMING&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Objective-C Programming: The Big Nerd Ranch Guide (2nd Edition)&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;When you run a program, a file is copied from the file system into memory (RAM), and the instructions in that file are executed by your computer.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The very lowest-level programming language is called assembly code.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The life of a programmer is mostly a never-ending struggle. Solving problems in an always-changing technical landscape means that programmers are always learning new things.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Most professional programmers learn to struggle hour after hour, day after day, without getting (too) frustrated. This is another skill that will serve you well.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Anything that is executable on a computer we call a program. Some programs have graphical user interfaces; we call these applications.Some programs have no graphical user interface and run for days in the background; we call these daemons.Some programs have no graphical user interface and run for a short time in the terminal; we call these command-line tools.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A function is a list of instructions for the computer to execute, and every function has a name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Code is the set of instructions that tell the computer to do something.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Comments are ignored by the computer, but we programmers use them to document code we have written. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Syntax is the set of rules that governs how code must be written in a given programming language. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A program is a collection of functions. A function is a list of operations for the processor to execute.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When you write a program in C (which is relatively pleasant for you), the compiler converts your program’s functions into machine code (which is pleasant and efficient for the processor). &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;As we get older, we are baffled much less often – not because we know everything, but because we tend to steer away from things that leave us bewildered.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A place where one piece of data can go is known as a variable.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In a program, you create a new variable by declaring its type and name.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;An expression is something that gets evaluated and results in some value.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In C, it was decided that 0 would represent false, and anything that is not zero would be considered true.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A function is a name associated with a chunk of code. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Values passed to a function are known as arguments. The argument’s value is then assigned to the corresponding parameter name. That parameter name can be used inside the function as a variable that contains the passed-in value.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Partitioning your code into functions makes it easier to make changes and to find and fix bugs. You can make a change or fix a typo in one place, and it will have the effects you want everywhere you call that function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A program is a collection of functions. When you run a program, those functions are copied from the hard drive into memory, and the processor finds the function called “main” and executes it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Local variables are variables declared inside a function.They exist only during the execution of that function and can only be accessed from within that function.A function can have many local variables, and all of them are stored in the frame for that function. Think of the frame as a blackboard that you can scribble on while the function is running. When the function is done executing, the blackboard is discarded.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Programmers use the word stack to describe where the frames are stored in memory.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When a function is called, its frame is pushed onto the top of the stack. When a function finishes executing, we say that it returns. That is, it pops its frame off the stack and lets the function that called it resume execution.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You can use the debugger to browse the frames on the stack.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When you return 0 to the system, you are saying “Everything went OK.” If you are terminating the program because something has gone wrong, you return 1.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A static variable is like a global variable in that it is declared outside of any function.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;A static variable is only accessible from the code in the file where it was declared. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Your computer is, at its core, a processor (the Central Processing Unit or CPU) and a vast meadow of switches (the Random-Access Memory or RAM) that can be turned on or off by the processor. We say that a switch holds one bit of information. You will often see 1 used to represent “on” and 0 used to represent “off.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Eight of these switches make a byte of information.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The processor can fetch the state of these switches, do operations on the bits, and store the result in another set of switches. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The address of a variable is the location in memory where the value for that variable is stored. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Memory addresses are nearly always printed in hexadecimal format.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Notice that the asterisk is used two different ways in this example:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When you declared addressOfI to be an int *. That is, you told the compiler “It will hold an address where an int can be stored.”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;When you read the int value that is stored at the address stored in addressOfI. (Pointers are also called references. Thus, using the pointer to read data at the address is sometimes called dereferencing the pointer.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sometimes you need a pointer to nothing. That is, you have a variable that can hold an address, and you want to store something in it that makes it explicit that the variable is not set to anything. We use NULL for this&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;What is NULL? Remember that an address is just a number. NULL is zero.&lt;/li&gt;
+&lt;li&gt;A typedef defines an alias for a type declaration and allows you to use it more like the usual data types.&lt;/li&gt;
+&lt;li&gt;So far, your programs have used one kind of memory – frames on the stack. Recall that every function has a frame where its local variables are stored. This memory is automatically allocated when a function starts and automatically deallocated when the function ends. In fact, local variables are sometimes called automatic variables because of this convenient behavior.&lt;/li&gt;
+&lt;li&gt;Sometimes, however, you need to claim a contiguous chunk of memory yourself – a buffer. Programmers often use the word buffer to mean a long line of bytes of memory. The buffer comes from a region of memory known as the heap, which is separate from the stack.&lt;/li&gt;
+&lt;li&gt;You request a buffer of memory using the function malloc(). When you are done using the buffer, you call the function free() to release your claim on that memory and return it to the heap.&lt;/li&gt;
+&lt;li&gt;A framework is library of classes that you use to write programs.&lt;/li&gt;
+&lt;li&gt;An object is similar to a struct (such as the struct Person you created in Chapter 11). Like a struct, an object can contain several pieces of related data. In a struct, we called them members. In an object, we call them instance variables (or you might hear “ivars”).&lt;/li&gt;
+&lt;li&gt;An object differs from a struct in that an object can also have its own functions that act on the data it contains. These functions are called methods.&lt;/li&gt;
+&lt;li&gt;A class defines a kind of object. It also produces objects of that kind. You can think of a class as both blueprint and factory.&lt;/li&gt;
+&lt;li&gt;What is the difference between #import and #include? #import is faster and more efficient.&lt;/li&gt;
+&lt;li&gt;In Objective-C, to execute the code in a method, you send a message to the object or class that has that method.&lt;/li&gt;
+&lt;li&gt;A message send is surrounded by square brackets and has two parts: the receiver and the selector.&lt;/li&gt;
+&lt;li&gt;Why 1970? OS X and iOS are based on Unix, and 1970 is the start of the “Unix epoch.”&lt;/li&gt;
+&lt;li&gt;Typically, class methods create an instance of the class and initialize its instance variables.&lt;/li&gt;
+&lt;li&gt;Typically, instance methods give you information about or perform an operation on an instance’s instance variables.&lt;/li&gt;
+&lt;li&gt;Message sends can be nested.&lt;/li&gt;
+&lt;li&gt;When message sends are nested, the system will handle the message send on the inside first and then the message that contains it.&lt;/li&gt;
+&lt;li&gt;The alloc method is a class method that every class has. It returns a pointer to a new instance that needs to be initialized. An uninitialized instance may exist in memory, but it is not ready to receive messages. The init method is an instance method that every class has. It initializes an instance so that it is ready to work.&lt;/li&gt;
+&lt;li&gt;Nearly all object-oriented languages have the idea of nil, the pointer to no object.&lt;/li&gt;
+&lt;li&gt;They really are the same thing: the zero pointer. By convention, though, we use nil when referring to the value of an empty pointer declared as pointing to an Objective-C object type, and NULL when referring to any other pointer, such as to a struct.&lt;/li&gt;
+&lt;li&gt;When Objective-C was designed, it was decided that sending a message to nil would be OK; it would simply do nothing.&lt;/li&gt;
+&lt;li&gt;Important thing #1: If you are sending messages and nothing is happening, make sure you are not sending messages to a pointer that has been set to nil.&lt;/li&gt;
+&lt;li&gt;Important thing #2: If you send a message to nil, the return value is meaningless and should be disregarded.&lt;/li&gt;
+&lt;li&gt;Notice that there is no asterisk in this declaration. id implies the asterisk.&lt;/li&gt;
+&lt;li&gt;Objects can only be accessed via a pointer,&lt;/li&gt;
+&lt;li&gt;However, is important to remember that the pointer and the object that it points at are not the same thing. Here is a more accurate statement: “now is a pointer that can hold an address of a location in memory where an instance of NSDate lives.”&lt;/li&gt;
+&lt;li&gt;If you lose your only pointer to an object, then you can no longer access it – even if it continues to exist on the heap.&lt;/li&gt;
+&lt;li&gt;When we talk about memory management, we are talking about managing heap memory.&lt;/li&gt;
+&lt;li&gt;The stack is an orderly stack of frames. Each frame is automatically deallocated when the function using it ends. The heap, on the other hand, is a heaping pile of memory, and that is where your objects live.&lt;/li&gt;
+&lt;li&gt;“reference” is another word for pointer&lt;/li&gt;
+&lt;li&gt;Each object keeps a count of how many references to itself there are. When this reference count reaches zero, the object knows it is no longer needed and will self-destruct.&lt;/li&gt;
+&lt;li&gt;When your project has ARC enabled, the compiler adds code to your project to tell each object when it gains or loses a reference.&lt;/li&gt;
+&lt;li&gt;As long as you have a pointer to an object, you can be sure that it will continue to exist.&lt;/li&gt;
+&lt;li&gt;You can only add or remove a reference to the object. The object will destroy itself when its reference count reaches zero.&lt;/li&gt;
+&lt;li&gt;An object also loses a reference when the pointer variable itself is destroyed.&lt;/li&gt;
+&lt;li&gt;To insert non-ASCII characters, use \u followed by the Unicode number for that character in hexadecimal.&lt;/li&gt;
+&lt;li&gt;An instance of NSMutableArray is similar to an instance of NSArray, but you can add, remove, and reorder pointers. (NSMutableArray is a subclass of NSArray.&lt;/li&gt;
+&lt;li&gt;Remember that a class describes objects in two ways: instance variables within each instance of the class and methods implemented by the class.&lt;/li&gt;
+&lt;li&gt;In object-oriented thinking, however, code that is outside of a class should not directly read or write to the instance variables of an instance of that class. Only code within the class can do that.&lt;/li&gt;
+&lt;li&gt;A getter method, or getter, allows code outside of a class to read, or get, the value of an instance variable.&lt;/li&gt;
+&lt;li&gt;A setter method, or setter, allows code outside of a class to change, or set, the value of an instance variable.&lt;/li&gt;
+&lt;li&gt;Setter and getter methods are collectively known as accessor methods, or simply accessors.&lt;/li&gt;
+&lt;li&gt;Self is a pointer to the object that is running the method. It is used when an object wants to send a message to itself.&lt;/li&gt;
+&lt;li&gt;Properties are either atomic or nonatomic. The difference has to do with multithreading, which is a topic beyond the scope of this book. All of the properties that you will declare in this book will be nonatomic.&lt;/li&gt;
+&lt;li&gt;Sometimes a class needs a “read-only” property – a property whose value can be read but not changed. A property like this should have a getter method but no setter method. You can instruct the compiler to create only a getter method by including a readonly value in the list of property attributes.&lt;/li&gt;
+&lt;li&gt;However, you did not have to include the readwrite attribute because readwrite is the default value. Default values are optional in declarations.&lt;/li&gt;
+&lt;li&gt;Practically speaking, whenever you declare a property that points to an NSString or an NSArray, you should include the copy attribute.&lt;/li&gt;
+&lt;li&gt;It is critical to remember, however, that when using dot notation with an object, a message is being sent.&lt;/li&gt;
+&lt;li&gt;You override an inherited method by writing a new implementation.&lt;/li&gt;
+&lt;li&gt;when you override a method, you can only change its implementation. You cannot change how it is declared; the method’s name, return type, and argument types must stay the same.&lt;/li&gt;
+&lt;li&gt;Every object’s isa pointer points at the class that created it.&lt;/li&gt;
+&lt;li&gt;When you send a message to an object, you kick off a search for a method of that name. The search follows the object’s isa pointer to start looking for the method in the object’s class. If there is no method of that name there, then it is on to the superclass. The hunt stops when the method is found or when the top of the hierarchy (NSObject) is reached.&lt;/li&gt;
+&lt;li&gt;When you use the super directive, you are sending a message to the current object but saying, “Run a method with this name, but start the search for its implementation at your superclass.”&lt;/li&gt;
+&lt;li&gt;An object instance variable points to another object and describes a relationship between the two objects.&lt;/li&gt;
+&lt;li&gt;Objects do not live inside other objects. The employee object contains its employee ID (the variable and the value itself), but it only knows where its spouse lives in memory.&lt;/li&gt;
+&lt;li&gt;There are two important side-effects to objects pointing to – rather than containing – other objects:&lt;/li&gt;
+&lt;li&gt;One object can take on several roles.&lt;/li&gt;
+&lt;li&gt;You end up with a lot of distinct objects using up your program’s memory. You need the objects being used to stay around, but you want the unnecessary ones to be deallocated (have their memory returned to the heap) so that their memory can be reused.&lt;/li&gt;
+&lt;li&gt;When an object has an object instance variable, the object with the pointer is said to own the object that is being pointed to.&lt;/li&gt;
+&lt;li&gt;When an object has zero owners, it figures no one needs it around anymore and deallocates itself.&lt;/li&gt;
+&lt;li&gt;The header is where a class advertises its properties and methods so that other objects will know how to interact with it.&lt;/li&gt;
+&lt;li&gt;Some properties or methods may only be intended for use by the class or instances of the class. Such internal details are better declared in a class extension. A class extension is a set of declarations that is private. Only the class or instances of the class are able to use the properties, instance variables, or methods declared in a class extension.&lt;/li&gt;
+&lt;li&gt;A subclass has no access to its superclass’s class extensions.&lt;/li&gt;
+&lt;li&gt;When a class declares a property in its header, only the accessors for this property are visible to other objects.&lt;/li&gt;
+&lt;li&gt;Strong reference cycles are a very common source of memory leaks.&lt;/li&gt;
+&lt;li&gt;How do you fix a strong reference cycle? Use a weak reference. A weak reference is a pointer that does not imply ownership.&lt;/li&gt;
+&lt;li&gt;In a parent-child relationship, the general rule for preventing this type of strong reference cycle is the parent owns the child, but the child should not own the parent.&lt;/li&gt;
+&lt;li&gt;A strong reference will keep the object it points to from being deallocated. A weak reference will not. Thus instance variables and properties that are marked as weak are pointing at objects that might go away. If this happens, that instance variable or property will be set to nil, instead of continuing to point to where the object used to live.&lt;/li&gt;
+&lt;li&gt;Sets are faster at testing object membership than arrays are.&lt;/li&gt;
+&lt;li&gt;An NSSet is immutable — you cannot add or remove objects after the set has been created. NSMutableSet is the subclass that adds the ability to add and remove objects from a set.&lt;/li&gt;
+&lt;li&gt;Identical objects are always equal. Equal objects are not always identical.&lt;/li&gt;
+&lt;li&gt;Using an immutable collection conserves memory and improves performance because that collection never needs to be copied.&lt;/li&gt;
+&lt;li&gt;An immutable collection also claims ownership of its objects, but the immutability of the collection means that all the objects in the collection are owned when the collection is created and disowned when the collection is deallocated.&lt;/li&gt;
+&lt;li&gt;What is the difference between #include and #import? #import ensures that the preprocessor only includes a file once. #include will allow you to include the same file many times. C programmers tend to use #include. Objective-C programmers tend to use #import.&lt;/li&gt;
+&lt;li&gt;When you use #define to do function-like stuff instead of simply substituting a value, you are creating a macro.&lt;/li&gt;
+&lt;li&gt;A pointer comparison is faster than a message send and scanning two strings character-by-character&lt;/li&gt;
+&lt;li&gt;A callback lets you write a piece of code and then associate that code with a particular event. When the event happens, your code is executed.&lt;/li&gt;
+&lt;li&gt;In Objective-C, there are four forms that a callback can take:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Target-action: Before the wait begins, you say “When this event happens, send this message to this object.” The object receiving the message is the target. The selector for the message is the action.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Helper objects: Before the wait begins, you say “Here is an object that will take on a role that helps another object do its job. When one of the events related to this role occurs, send a message to the helper object.” Helper objects are often known as delegates or data sources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Notifications: There is an object called the notification center. When an event happens, a notification associated with that event will be posted to the notification center. Before the wait begins, you tell the notification center “This object is interested in this kind of notification. When one is posted, send this message to the object.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Blocks: A block is a just a chunk of code to be executed. Before the wait begins, you say “Here is a block. When this event happens, execute this block.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;When sending one callback to one object, Apple uses target-action. When sending an assortment of callbacks to one object, Apple uses a helper object with a protocol. These helper objects are typically called delegates or data sources.&lt;/li&gt;
+&lt;li&gt;Objects that do just one thing (like NSTimer) use target-action.&lt;/li&gt;
+&lt;li&gt;Objects that have more complicated lives (like an NSURLConnection) use helper objects, and the most common type of helper object is the delegate.&lt;/li&gt;
+&lt;li&gt;Objects that might need to trigger callbacks in several other objects (like NSTimeZone) use notifications.&lt;/li&gt;
+&lt;li&gt;A block is a chunk of code.&lt;/li&gt;
+&lt;li&gt;You can pass a block as an argument to a method that accepts a block. Many of Apple’s classes have methods that accept blocks as arguments.&lt;/li&gt;
+&lt;li&gt;Blocks, on the other hand, keep the code to be triggered by an event close by.&lt;/li&gt;
+&lt;li&gt;An anonymous block is a block that you pass directly to a method without assigning it to a block variable first.&lt;/li&gt;
+&lt;li&gt;At their deepest darkest cores, objects are actually structs.&lt;/li&gt;
+&lt;li&gt;Don’t access instance variables directly. Use your accessors!&lt;/li&gt;
+&lt;li&gt;the class of an object is different from its role in a working system.&lt;/li&gt;
+&lt;li&gt;A protocol can specify a role that an object can fill.&lt;/li&gt;
+&lt;li&gt;The compiler considers an object to have successfully conformed to a protocol if the object has implemented all of the protocol’s required methods.&lt;/li&gt;
+&lt;li&gt;A GUI-based application is event-driven. When the application is launched, it starts a run loop that sits and waits for events. Events can be generated by the user (like a button tap) or by the system (like a low-memory warning). When an event happens, the application leaps into action to respond to the specific event. All iOS applications are event-driven applications.&lt;/li&gt;
+&lt;li&gt;The “app delegate” is the starting point of an application, and every iOS application has one.&lt;/li&gt;
+&lt;li&gt;Model-View-Controller, or MVC, is a design pattern that is based on the idea that any class that you create should fall into one of three job categories: model, view, or controller.&lt;/li&gt;
+&lt;li&gt;When an iOS application first launches, a lot of setup is happening behind the scenes. An instance of UIApplication is created to control the application’s state and act as liaison to the operating system. An instance of BNRAppDelegate is also created and set as the delegate of the UIApplication instance (which explains the name “app delegate”).&lt;/li&gt;
+&lt;li&gt;A control is a view that the user can interact with.&lt;/li&gt;
+&lt;li&gt;This statement tells you that IBAction is replaced with void before the compiler sees it. All IBAction keywords can replaced with void because actions invoked by user interface controls are not expected to have a return value.&lt;/li&gt;
+&lt;li&gt;“Outlet” is just another word for “object pointer.”&lt;/li&gt;
+&lt;li&gt;You send the init message to the new instance so that it can initialize its instance variables to usable values; alloc creates the space for an object, and init makes the object ready to work. Notice that init is an instance method that returns the address of the initialized object. It is the initializer for NSObject.&lt;/li&gt;
+&lt;li&gt;In the first line of init, you set self to point to the object returned from the superclass’s init method.&lt;/li&gt;
+&lt;li&gt;You check that the superclass’s initializer returns a valid object and not nil.&lt;/li&gt;
+&lt;li&gt;The init method figures out a clever optimization that it can do, deallocates the original object, allocates a different object, and returns the new object.&lt;/li&gt;
+&lt;li&gt;To address this possibility, Apple requires that you set self to point to the object returned from the superclass’s initializer.&lt;/li&gt;
+&lt;li&gt;The init method fails, deallocates the object, and returns nil.&lt;/li&gt;
+&lt;li&gt;To deal with this possibility, Apple recommends that you check that the superclass’s initializer returns a valid object and not nil. After all, there is no point in performing custom set-up on an object that does not exist.&lt;/li&gt;
+&lt;li&gt;When you create a subclass, you typically only need to initialize the instance variables that the subclass introduced; let the superclass take care of the instance variables that it introduced.&lt;/li&gt;
+&lt;li&gt;The designated initializer acts as a funnel-point. A class has only one designated initializer method. If the class has other initializers, then the implementation of those initializers must call (directly or indirectly) the designated initializer.&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;If a class has several initializers, only one should do the real work. That method is known as the designated initializer. All other initializers should call, either directly or indirectly, the designated initializer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;The designated initializer will call the superclass’s designated initializer before initializing its instance variables.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;If the designated initializer of your class has a different name than the designated initializer of its superclass, you must override the superclass’s designated initializer so that it calls the new designated initializer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;If you have several initializers, clearly document which is the designated initializer in the header.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;A property can be declared readwrite or readonly. The default is readwrite, which means that both a setter and a getter method are created. If you do not want a setter method to be created, you mark the property as readonly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;A property can also be declared unsafe_unretained, assign, strong, weak, or copy. This option determines how the setter handles the property’s memory management.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;assign is the default for non-object types and the simplest: it just assigns the passed-in value to the property&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;You will always use assign for properties that hold non-objects. Because it is the default for non-object types, you do not have to add it to your property declaration.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;strong, as you learned in Chapter 23, will ensure that a strong reference is kept to the passed-in object. It will also let go of ownership of the old object (which will then deallocate itself if it has no other owners).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;For object properties, strong is the default for object pointers, and that is usually what you want.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;weak does not imply ownership of the object pointed to. If this object is deallocated, then the property will be set to nil.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;A dangling pointer points to an object that no longer exists. Sending a message to a dangling pointer usually crashes your program.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;unsafe_unretained properties, like weak properties, do not imply ownership. However, an unsafe_unretained property is not automatically set to nil when the object that it points to is deallocated.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;The copy option makes a copy of an object and then changes the pointer to refer to this copy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Use of the copy attribute is most common with object types that have mutable subclasses.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;What if the object passed in is not mutable? It seems wasteful to make a copy of an immutable object. The copy method just calls copyWithZone: and passes nil as the argument.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;For objects that come in mutable and immutable versions, the copy method returns an immutable copy. For example, NSMutableString has a copy method that returns an instance of NSString. If you want the copy to be a mutable object, use the mutableCopy method.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;the nonatomic option will make your setter method run a tiny bit faster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;You should always make your readwrite properties nonatomic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;There are two reasonable cases to implement an accessor yourself:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;You need to update the app’s user interface when the change occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;You need to update some cached info when the change occurs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;If you declare a property and implement both accessors yourself, the compiler will not synthesize an instance variable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Key-value coding is the ability to read and set a property using its name. The key-value coding methods are defined in NSObject, and thus every object has this capability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Key-value observing is a technique that lets you get a notification when a particular property of an object changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;When you add yourself as an object’s observer, you specify the name of the property you are observing. You can also specify some options. In particular, you can tell the object to send you the old and/or new value of the property when you are notified of the change.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;Categories let a programmer add methods to any existing class.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;When you implement a method using a category, it replaces any method with the same name that already exists on the class.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;You should use categories to add functionality to existing classes. Do not use them to replace functionality in existing classes; use subclassing instead.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Objective-C-Programming-The-Big-Nerd-Ranch-Guide-2nd-Edition&quot;&gt;&lt;a href=&quot;#Objective-C-Programming-The-Big-Nerd-Ranch-Guide-2nd-Edition
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://myzle.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="iOS" scheme="http://myzle.github.io/tags/iOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>回忆</title>
+    <link href="http://myzle.github.io/2015/10/15/New-post/"/>
+    <id>http://myzle.github.io/2015/10/15/New-post/</id>
+    <published>2015-10-15T08:39:22.000Z</published>
+    <updated>2015-10-15T08:43:32.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;/images/IMG_3552.jpg&quot; style=&quot;width: 700px;&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/images/IMG_3552.jpg&quot; style=&quot;width: 700px;&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="老照片" scheme="http://myzle.github.io/categories/%E8%80%81%E7%85%A7%E7%89%87/"/>
+    
+    
+      <category term="Self" scheme="http://myzle.github.io/tags/Self/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>原点</title>
+    <link href="http://myzle.github.io/2015/08/05/first-new-post/"/>
+    <id>http://myzle.github.io/2015/08/05/first-new-post/</id>
+    <published>2015-08-05T10:40:51.000Z</published>
+    <updated>2015-12-11T11:01:59.000Z</updated>
+    
+    <content type="html">&lt;p&gt;好吧，就从这里开始！&lt;/p&gt;
+&lt;p&gt;如果将生命比作玩游戏，那这个游戏只有一条命，不能“SAVE”和“LOAD”，趁现在还来得及，出发吧！&lt;/p&gt;
+&lt;p&gt;做一件事最好的时机是10年前，其次是现在！！！&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;好吧，就从这里开始！&lt;/p&gt;
+&lt;p&gt;如果将生命比作玩游戏，那这个游戏只有一条命，不能“SAVE”和“LOAD”，趁现在还来得及，出发吧！&lt;/p&gt;
+&lt;p&gt;做一件事最好的时机是10年前，其次是现在！！！&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="Note" scheme="http://myzle.github.io/categories/Note/"/>
+    
+    
+      <category term="Self" scheme="http://myzle.github.io/tags/Self/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://myzle.github.io/2015/08/05/hello-world/"/>
+    <id>http://myzle.github.io/2015/08/05/hello-world/</id>
+    <published>2015-08-05T08:39:22.000Z</published>
+    <updated>2016-02-04T04:26:51.000Z</updated>
+    
+    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;http://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;http://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;http://hexo.io
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
