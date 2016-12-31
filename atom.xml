@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://myzle.github.io/"/>
-  <updated>2016-02-04T04:02:15.000Z</updated>
+  <updated>2016-12-31T15:00:18.000Z</updated>
   <id>http://myzle.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2016 See you again!</title>
+    <link href="http://myzle.github.io/2016/12/31/final-2016/"/>
+    <id>http://myzle.github.io/2016/12/31/final-2016/</id>
+    <published>2016-12-31T14:48:23.000Z</published>
+    <updated>2016-12-31T15:00:18.000Z</updated>
+    
+    <content type="html">&lt;p&gt;今天是2016年的最后一天&lt;/p&gt;
+&lt;h2 id=&quot;做了什么&quot;&gt;&lt;a href=&quot;#做了什么&quot; class=&quot;headerlink&quot; title=&quot;做了什么&quot;&gt;&lt;/a&gt;做了什么&lt;/h2&gt;&lt;p&gt;2月份不想说&lt;/p&gt;
+&lt;p&gt;3月份去了新的公司&lt;/p&gt;
+&lt;p&gt;系统使用了大半年的appium，算是对移动测试入门了&lt;/p&gt;
+&lt;p&gt;python又重新捡起来了&lt;/p&gt;
+&lt;p&gt;开始学习前端了，感觉自己还学的动&lt;/p&gt;
+&lt;p&gt;没了。。。&lt;/p&gt;
+&lt;h2 id=&quot;没做什么&quot;&gt;&lt;a href=&quot;#没做什么&quot; class=&quot;headerlink&quot; title=&quot;没做什么&quot;&gt;&lt;/a&gt;没做什么&lt;/h2&gt;&lt;p&gt;没有发布自己的iOS作品&lt;/p&gt;
+&lt;p&gt;没有像年初计划的那样走上开发之路&lt;/p&gt;
+&lt;p&gt;编码水平没有大幅度提高&lt;/p&gt;
+&lt;p&gt;自己买的技术书还是没有看完几本&lt;/p&gt;
+&lt;h2 id=&quot;关于2017&quot;&gt;&lt;a href=&quot;#关于2017&quot; class=&quot;headerlink&quot; title=&quot;关于2017&quot;&gt;&lt;/a&gt;关于2017&lt;/h2&gt;&lt;p&gt;发布自己的第一个iOS程序&lt;/p&gt;
+&lt;p&gt;前端有所作为&lt;/p&gt;
+&lt;p&gt;多多读书&lt;/p&gt;
+&lt;p&gt;买一辆小车&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;今天是2016年的最后一天&lt;/p&gt;
+&lt;h2 id=&quot;做了什么&quot;&gt;&lt;a href=&quot;#做了什么&quot; class=&quot;headerlink&quot; title=&quot;做了什么&quot;&gt;&lt;/a&gt;做了什么&lt;/h2&gt;&lt;p&gt;2月份不想说&lt;/p&gt;
+&lt;p&gt;3月份去了新的公司&lt;/p&gt;
+&lt;p&gt;系统使用了大半年的a
+    
+    </summary>
+    
+      <category term="Note" scheme="http://myzle.github.io/categories/Note/"/>
+    
+    
+      <category term="Self" scheme="http://myzle.github.io/tags/Self/"/>
+    
+  </entry>
   
   <entry>
     <title>Swift学习笔记</title>
